@@ -1,18 +1,56 @@
 .storybook-button {
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
+  font-family: 'Inter', sans-serif; /* AI Nativeっぽいフォントに */
+  font-weight: 600;
   border: 0;
-  border-radius: 8px;
+  border-radius: 6px; /* Figmaの角丸に合わせて調整 */
   cursor: pointer;
   display: inline-block;
   line-height: 1;
-  padding: 12px 24px;
+  padding: 10px 20px;
+  font-size: 14px;
+  transition: all 0.2s ease;
 }
 
-/* Intent別の色設定（Figmaに合わせて調整してください） */
-.storybook-button--Primary { background-color: #1ea7fd; color: white; }
-.storybook-button--Secondary { background-color: #f0f0f0; color: #333; border: 1px solid #ccc; }
-.storybook-button--Danger { background-color: #ff4742; color: white; }
+/* Primary: 鮮やかな青背景 / 白文字 */
+.storybook-button--Primary {
+  background-color: #4A90E2;
+  color: white;
+}
 
-/* State別の設定 */
-.storybook-button--Disable { opacity: 0.5; cursor: not-allowed; }
+/* Secondary: 白背景 / 青枠線 / 青文字 (2行目のスタイル) */
+.storybook-button--Secondary {
+  background-color: #FFFFFF;
+  color: #4A90E2;
+  border: 1px solid #4A90E2;
+}
+
+/* Ghost: 背景なし / 青文字 (一番下のスタイル) */
+.storybook-button--Ghost {
+  background-color: transparent;
+  color: #4A90E2;
+}
+.storybook-button--Ghost:hover {
+  background-color: rgba(74, 144, 226, 0.05);
+}
+
+/* Negative / Tertiary などもスクショに近い色に変更 */
+.storybook-button--Tertiary {
+  background-color: #E1EEFF;
+  color: #4A90E2;
+}
+
+.storybook-button--Negative {
+  background-color: #F1F1F1;
+  color: #333333;
+}
+
+.storybook-button--Danger {
+  background-color: #D9534F;
+  color: white;
+}
+
+/* Disable状態: 透明度を下げる */
+.storybook-button--Disable {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
