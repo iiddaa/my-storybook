@@ -17,32 +17,45 @@ export default {
     },
     label: { control: 'text' },
   },
+  // ここに「全体の説明」を書くと、Docsの一番上に出ます
+  parameters: {
+    docs: {
+      description: {
+        component: 'AI Nativeデザインシステムのボタンコンポーネントです。用途に応じてIntentを使い分けてください。',
+      },
+    },
+  },
 };
 
 export const Primary = {
   args: { intent: 'Primary', state: 'Default', label: 'Primary' },
   parameters: {
-    docs: { story: { description: '画面内でもっとも重要なアクション（保存、送信など）に使用します。原則として1画面に1つだけ配置します。' } },
+    docs: {
+      description: {
+        story: '【重要】画面内でもっとも優先度の高いアクション（保存、送信など）に使用します。',
+      },
+    },
   },
 };
 
 export const Secondary = {
   args: { intent: 'Secondary', state: 'Default', label: 'Secondary' },
   parameters: {
-    docs: { story: { description: 'Primaryに次いで優先度の高いアクション（キャンセル、戻る、下書き保存など）に使用します。' } },
+    docs: {
+      description: {
+        story: 'Primaryに次ぐアクション（キャンセル、戻るなど）に使用します。',
+      },
+    },
   },
 };
 
 export const Ghost = {
   args: { intent: 'Ghost', state: 'Default', label: 'Ghost' },
   parameters: {
-    docs: { story: { description: 'UIの邪魔をしたくない、もっとも優先度の低いアクションに使用します。' } },
-  },
-};
-
-export const Danger = {
-  args: { intent: 'Danger', state: 'Default', label: 'Danger' },
-  parameters: {
-    docs: { story: { description: '削除や退会など、ユーザーに注意を促す破壊的な操作に使用します。' } },
+    docs: {
+      description: {
+        story: 'もっとも優先度の低い、UIの邪魔をしないアクションに使用します。',
+      },
+    },
   },
 };
