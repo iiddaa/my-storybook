@@ -17,36 +17,32 @@ export default {
     },
     label: { control: 'text' },
   },
-  // 全てのストーリーに共通のFigma設定
-  parameters: {
-    design: {
-      type: 'figma',
-      url: 'https://www.figma.com/design/u0fFtcvDvMbfcfsp1YMpgy/Design-System-2.0--AI-Native-?node-id=57-15&t=BptmAbOb3AoEVTR7-1',
-    },
-  },
 };
 
-// ここから左ナビに並べる設定
 export const Primary = {
   args: { intent: 'Primary', state: 'Default', label: 'Primary' },
+  parameters: {
+    docs: { story: { description: '画面内でもっとも重要なアクション（保存、送信など）に使用します。原則として1画面に1つだけ配置します。' } },
+  },
 };
 
 export const Secondary = {
   args: { intent: 'Secondary', state: 'Default', label: 'Secondary' },
-};
-
-export const Danger = {
-  args: { intent: 'Danger', state: 'Default', label: 'Danger' },
-};
-
-export const Negative = {
-  args: { intent: 'Negative', state: 'Default', label: 'Negative' },
+  parameters: {
+    docs: { story: { description: 'Primaryに次いで優先度の高いアクション（キャンセル、戻る、下書き保存など）に使用します。' } },
+  },
 };
 
 export const Ghost = {
   args: { intent: 'Ghost', state: 'Default', label: 'Ghost' },
+  parameters: {
+    docs: { story: { description: 'UIの邪魔をしたくない、もっとも優先度の低いアクションに使用します。' } },
+  },
 };
 
-export const Disabled = {
-  args: { intent: 'Primary', state: 'Disable', label: 'Disabled' },
+export const Danger = {
+  args: { intent: 'Danger', state: 'Default', label: 'Danger' },
+  parameters: {
+    docs: { story: { description: '削除や退会など、ユーザーに注意を促す破壊的な操作に使用します。' } },
+  },
 };
