@@ -1,0 +1,18 @@
+.storybook-button {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  padding: 12px 24px;
+}
+
+/* Intent別の色設定（Figmaに合わせて調整してください） */
+.storybook-button--Primary { background-color: #1ea7fd; color: white; }
+.storybook-button--Secondary { background-color: #f0f0f0; color: #333; border: 1px solid #ccc; }
+.storybook-button--Danger { background-color: #ff4742; color: white; }
+
+/* State別の設定 */
+.storybook-button--Disable { opacity: 0.5; cursor: not-allowed; }
