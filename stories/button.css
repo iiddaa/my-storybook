@@ -1,0 +1,53 @@
+:root {
+  /* --- Primitives (生の色) --- */
+  --color-blue-600: #1E74DB;
+  --color-blue-500: #318BF7;
+  --color-blue-300: #98C5FB;
+  
+  --color-gray-900: #222222;
+  --color-gray-600: #515A65;
+  --color-gray-400: #858C94;
+  --color-gray-300: #ADB2B8;
+  
+  --color-red-500: #EB4D38;
+  --color-red-100: #FDF2F0;
+
+  --color-neutral-white: #FFFFFF;
+}
+
+.storybook-button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  padding: 10px 20px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+/* --- Primary (FigmaのSemanticを反映) --- */
+.storybook-button--Primary { 
+  color: var(--color-neutral-white); 
+}
+.storybook-button--Primary[data-state='Default'] { background-color: var(--color-blue-500); }
+.storybook-button--Primary[data-state='Hover']   { background-color: var(--color-blue-600); }
+.storybook-button--Primary[data-state='Disable'] { background-color: var(--color-blue-300); }
+
+/* --- Secondary --- */
+.storybook-button--Secondary { 
+  background-color: var(--color-neutral-white);
+  color: var(--color-blue-500);
+  border: 1px solid;
+}
+.storybook-button--Secondary[data-state='Default'] { border-color: var(--color-blue-500); }
+.storybook-button--Secondary[data-state='Hover']   { border-color: var(--color-blue-600); color: var(--color-blue-600); background-color: #F5F9FF; }
+.storybook-button--Secondary[data-state='Disable'] { border-color: var(--color-blue-300); color: var(--color-blue-300); }
+
+/* --- Danger --- */
+.storybook-button--Danger[data-state='Default'] { background-color: var(--color-red-500); color: var(--color-neutral-white); }
+.storybook-button--Danger[data-state='Disable'] { background-color: var(--color-red-100); color: var(--color-red-500); }
+
+.storybook-button[data-state='Disable'] { cursor: not-allowed; }

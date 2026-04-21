@@ -1,0 +1,98 @@
+/* =====================================================
+   RadioButton
+   ===================================================== */
+
+/* --- 単体アイテム --- */
+.storybook-radio-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  /* ラベルも含めてクリック領域を確保する（Figmaガイドライン） */
+}
+
+.storybook-radio-item--disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* --- ネイティブ input を非表示にしてカスタム表示に置き換える --- */
+.storybook-radio-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  pointer-events: none;
+}
+
+/* --- カスタムラジオ丸 --- */
+.storybook-radio-circle {
+  position: relative;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 99px;
+  border: 1px solid #d6d9db;
+  background-color: #fff;
+  transition: background-color 0.1s ease, border-color 0.1s ease;
+}
+
+/* 選択済み：青背景 + 中央に白ドット */
+.storybook-radio-circle--checked {
+  background-color: #318bf7;
+  border-radius: 10px;
+}
+
+.storybook-radio-circle--checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+/* hover（PCのみ・Figmaガイドライン） */
+.storybook-radio-item:not(.storybook-radio-item--disabled):hover .storybook-radio-circle:not(.storybook-radio-circle--checked) {
+  border-color: #318bf7;
+}
+
+/* focused */
+.storybook-radio-input:focus-visible + .storybook-radio-circle {
+  outline: 2px solid #318bf7;
+  outline-offset: 2px;
+}
+
+/* --- テキストエリア --- */
+.storybook-radio-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.storybook-radio-label {
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #222;
+}
+
+.storybook-radio-hint {
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #5c6670;
+}
+
+/* --- グループ --- */
+.storybook-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

@@ -1,0 +1,138 @@
+/* =====================================================
+   Modal
+   ===================================================== */
+
+/* --- Overlay --- */
+.storybook-modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+}
+
+/* --- Panel --- */
+.storybook-modal-panel {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* size variants: S=500px / M=700px / L=900px */
+.storybook-modal-panel--S { width: 500px; }
+.storybook-modal-panel--M { width: 700px; }
+.storybook-modal-panel--L { width: 900px; }
+
+/* --- Header --- */
+.storybook-modal-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 16px 24px;
+  background-color: #fff;
+}
+
+.storybook-modal-title {
+  flex: 1;
+  margin: 0;
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.5;
+  color: #222;
+}
+
+.storybook-modal-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: #222;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.storybook-modal-close:hover {
+  background-color: #f7f7f8;
+}
+
+/* --- Content --- */
+.storybook-modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 24px;
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #222;
+}
+
+/* --- Footer --- */
+.storybook-modal-footer {
+  padding: 16px 24px;
+  border-top: 1px solid #d6d9db;
+  background-color: #fff;
+}
+
+.storybook-modal-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.storybook-modal-subtext {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #222;
+}
+
+/* --- Buttons --- */
+.storybook-modal-btn {
+  flex-shrink: 0;
+  padding: 8px 16px;
+  border: 0;
+  border-radius: 4px;
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.storybook-modal-btn--cancel {
+  background-color: #fff;
+  color: #318bf7;
+  border: 1px solid #318bf7;
+}
+
+.storybook-modal-btn--cancel:hover {
+  background-color: #f5f9ff;
+}
+
+.storybook-modal-btn--confirm {
+  background-color: #318bf7;
+  color: #fff;
+}
+
+.storybook-modal-btn--confirm:hover {
+  background-color: #1e74db;
+}
