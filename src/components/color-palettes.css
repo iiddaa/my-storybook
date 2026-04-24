@@ -1,0 +1,135 @@
+/* ==============================================
+   Color Palettes
+   ============================================== */
+
+.storybook-color-palettes {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: 'Hiragino Sans', sans-serif;
+}
+
+/* ─── Head ─── */
+
+.storybook-color-palettes__head {
+  background: #318bf7;
+  padding: 80px 80px 40px;
+  border-radius: 16px 16px 0 0;
+}
+
+.storybook-color-palettes__title {
+  font-size: 56px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.5;
+  opacity: 0.9;
+  margin: 0;
+  font-family: 'Hiragino Sans', sans-serif;
+}
+
+/* ─── Body ─── */
+
+.storybook-color-palettes__body {
+  background: #fff;
+  padding: 80px;
+}
+
+/* ─── Section ─── */
+
+.storybook-color-palettes__section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.storybook-color-palettes__section-title {
+  font-size: 24px;
+  font-weight: 300;
+  color: #1e74db;
+  line-height: 1.5;
+  opacity: 0.9;
+  margin: 0;
+  font-family: 'Hiragino Sans', sans-serif;
+  white-space: nowrap;
+}
+
+/* ─── Card ─── */
+
+.storybook-color-palettes__card {
+  background: #f7f7f8;
+  border-radius: 16px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* ─── Scales row / Accents row ─── */
+
+.storybook-color-palettes__scales,
+.storybook-color-palettes__accents {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+/* ─── Color Group ─── */
+
+.storybook-color-palettes__group {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 116px;
+  flex-shrink: 0;
+}
+
+.storybook-color-palettes__group-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: #222;
+  line-height: 1.5;
+  flex-shrink: 0;
+  /* 最初のスウォッチと垂直位置を揃える */
+  padding-top: 3px;
+}
+
+/* ─── Swatches ─── */
+
+.storybook-color-palettes__swatches {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 60px;
+  flex-shrink: 0;
+}
+
+.storybook-color-palettes__swatch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60px;
+}
+
+.storybook-color-palettes__swatch-step {
+  font-size: 12px;
+  font-weight: 300;
+  color: #222;
+  line-height: 1.5;
+  white-space: nowrap;
+  font-family: 'Hiragino Sans', sans-serif;
+}
+
+/* Figma準拠：Gray/Blue の 800・700 ステップはミュートカラーで表示 */
+.storybook-color-palettes__swatch-step--muted {
+  color: #adb2b8;
+}
+
+.storybook-color-palettes__swatch-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  /* 白・極淡色スウォッチをカード背景に対して識別しやすくする最小ボーダー */
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  display: block;
+}

@@ -1,0 +1,76 @@
+/* =====================================================
+   InformationPanel
+   ===================================================== */
+
+.storybook-information-panel {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-family: 'Hiragino Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+  font-style: normal;
+  color: #222;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ─── Type variants ─── */
+.storybook-information-panel--Progress { background-color: #eaf3fe; }
+.storybook-information-panel--Success  { background-color: #e4f5ef; }
+.storybook-information-panel--Error    { background-color: #fdf2f0; }
+.storybook-information-panel--Warning  { background-color: #fef4ed; }
+.storybook-information-panel--Notice   { background-color: #eff0f1; }
+
+/* ─── Icon wrapper ─── */
+.storybook-information-panel__icon {
+  display: flex;
+  align-items: center;
+  /* 14px × 1.5 = 21px — テキスト1行分に合わせてアイコンを垂直中央に */
+  height: 21px;
+  flex-shrink: 0;
+}
+
+/* ─── Body ─── */
+.storybook-information-panel__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+/* ─── Message ─── */
+.storybook-information-panel__message {
+  margin: 0;
+  font-family: 'Hiragino Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #222;
+}
+
+/* ─── Text link ─── */
+.storybook-information-panel__link {
+  font-family: 'Hiragino Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #318bf7;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  white-space: nowrap;
+  cursor: pointer;
+  align-self: flex-start;
+}
+.storybook-information-panel__link:hover {
+  color: #1e74db;
+}
+.storybook-information-panel__link:focus-visible {
+  outline: 2px solid #318bf7;
+  outline-offset: 2px;
+  border-radius: 2px;
+}

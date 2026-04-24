@@ -1,0 +1,150 @@
+/* =====================================================
+   Button
+   ===================================================== */
+
+.storybook-button {
+  font-family: 'Hiragino Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  font-style: normal;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.storybook-button[data-state='Disable'],
+.storybook-button:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* --- Size --- */
+/* M: padding 8px 16px / font W6（Bold） */
+.storybook-button--M {
+  padding: 8px 16px;
+  font-weight: 600;
+}
+
+/* S: padding 4px 12px / font W3（Regular） */
+.storybook-button--S {
+  padding: 4px 12px;
+  font-weight: 300;
+}
+
+/* =====================================================
+   Primary
+   主要アクションに使用する。
+   ===================================================== */
+.storybook-button--Primary {
+  background-color: #318bf7;
+  color: #ffffff;
+}
+.storybook-button--Primary:hover:not([data-state='Disable']),
+.storybook-button--Primary[data-state='Hover'] {
+  background-color: #1e74db;
+}
+.storybook-button--Primary[data-state='Disable'] {
+  background-color: #98c5fb;
+  color: #ffffff;
+}
+
+/* =====================================================
+   Secondary
+   副次的なアクション。
+   PrimaryだとUI上ノイズとなってしまう場合。
+   ===================================================== */
+.storybook-button--Secondary {
+  background-color: #ffffff;
+  color: #318bf7;
+  border: 1px solid #318bf7;
+}
+.storybook-button--Secondary:hover:not([data-state='Disable']),
+.storybook-button--Secondary[data-state='Hover'] {
+  background-color: #f5f9ff;
+  color: #1e74db;
+  border-color: #1e74db;
+}
+.storybook-button--Secondary[data-state='Disable'] {
+  background-color: #ffffff;
+  color: #98c5fb;
+  border-color: #98c5fb;
+}
+
+/* =====================================================
+   Tertiary
+   PrimaryやSecondaryより優先度を下げたい場合。
+   積極的に押させたいわけではないが、遷移できることは示唆したい場合。
+   ===================================================== */
+.storybook-button--Tertiary {
+  background-color: #eaf3fe;
+  color: #318bf7;
+}
+.storybook-button--Tertiary:hover:not([data-state='Disable']),
+.storybook-button--Tertiary[data-state='Hover'] {
+  background-color: #cbe2fd;
+  color: #1e74db;
+}
+.storybook-button--Tertiary[data-state='Disable'] {
+  background-color: #f5f9ff;
+  color: #98c5fb;
+}
+
+/* =====================================================
+   Ghost
+   UI上、ボタン表現が視覚的ノイズとなってしまう場合。
+   ===================================================== */
+.storybook-button--Ghost {
+  background-color: transparent;
+  color: #318bf7;
+}
+.storybook-button--Ghost:hover:not([data-state='Disable']),
+.storybook-button--Ghost[data-state='Hover'] {
+  background-color: #f5f9ff;
+  color: #1e74db;
+}
+.storybook-button--Ghost[data-state='Disable'] {
+  background-color: transparent;
+  color: #98c5fb;
+}
+
+/* =====================================================
+   Negative
+   ネガティブな操作。
+   「削除」のような不可逆な変更や、「解除」のような何かができなくなる場合。
+   ===================================================== */
+.storybook-button--Negative {
+  background-color: #eff0f1;
+  color: #5c6670;
+}
+.storybook-button--Negative:hover:not([data-state='Disable']),
+.storybook-button--Negative[data-state='Hover'] {
+  background-color: #d6d9db;
+  color: #515a65;
+}
+.storybook-button--Negative[data-state='Disable'] {
+  background-color: #f7f7f8;
+  color: #adb2b8;
+}
+
+/* =====================================================
+   Danger
+   主要アクション（破壊的・危険な操作）。
+   ===================================================== */
+.storybook-button--Danger {
+  background-color: #eb4d38;
+  color: #ffffff;
+}
+.storybook-button--Danger:hover:not([data-state='Disable']),
+.storybook-button--Danger[data-state='Hover'] {
+  background-color: #eb4d38;
+  color: #ffffff;
+}
+.storybook-button--Danger[data-state='Disable'] {
+  background-color: #fdf2f0;
+  color: #ffffff;
+}
