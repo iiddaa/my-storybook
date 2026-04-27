@@ -1,0 +1,224 @@
+/* ==============================================
+   Semantic Color
+   ============================================== */
+
+.storybook-semantic-color {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: 'Hiragino Sans', sans-serif;
+}
+
+/* ─── Head ─── */
+
+.storybook-semantic-color__head {
+  background: #318bf7;
+  padding: 80px 80px 40px;
+  border-radius: 16px 16px 0 0;
+}
+
+.storybook-semantic-color__title {
+  font-size: 56px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.5;
+  opacity: 0.9;
+  margin: 0;
+  font-family: 'Hiragino Sans', sans-serif;
+}
+
+/* ─── Body ─── */
+
+.storybook-semantic-color__body {
+  background: #fff;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+/* ─── 概念セクション ─── */
+
+.storybook-semantic-color__concept {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* 概念ラベル行（"概念" + 説明文インライン） */
+.storybook-semantic-color__concept-label-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.storybook-semantic-color__concept-label {
+  font-size: 24px;
+  font-weight: 300;
+  color: #1e74db;
+  line-height: 1.5;
+  opacity: 0.9;
+  margin: 0;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.storybook-semantic-color__concept-tagline {
+  font-size: 12px;
+  font-weight: 300;
+  color: #1e74db;
+  line-height: 1.5;
+  opacity: 0.9;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* 概念本文（32px、Figma: font/exl） */
+.storybook-semantic-color__concept-body {
+  opacity: 0.9;
+}
+
+.storybook-semantic-color__concept-body p {
+  font-size: 32px;
+  font-weight: 300;
+  color: #222;
+  line-height: 1.5;
+  margin: 0;
+  font-family: 'Hiragino Sans', sans-serif;
+}
+
+/* ─── カテゴリ群 ─── */
+
+.storybook-semantic-color__categories {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+/* ─── 各カテゴリ ─── */
+
+.storybook-semantic-color__category {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.storybook-semantic-color__category-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.storybook-semantic-color__category-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  line-height: 1.5;
+  opacity: 0.9;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.storybook-semantic-color__category-desc {
+  font-size: 14px;
+  font-weight: 300;
+  color: #222;
+  line-height: 1.5;
+  opacity: 0.9;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* ─── カード（Figma: bg/sub #F7F7F8, p-40px, rounded-16px, gap-8px） ─── */
+
+.storybook-semantic-color__card {
+  background: #f7f7f8;
+  border-radius: 16px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ─── テーブルヘッダー行（Figma: bg/notice #EFF0F1, px-24px py-8px） ─── */
+
+.storybook-semantic-color__table-header {
+  background: #eff0f1;
+  display: flex;
+  align-items: flex-start;
+  gap: 236px;
+  padding: 8px 24px;
+}
+
+.storybook-semantic-color__table-label {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #151518;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  opacity: 0.9;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* ─── カラー行（Figma: bg/main white, px-40px py-16px, gap-40px） ─── */
+
+.storybook-semantic-color__row {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 16px 40px;
+}
+
+/* カラースクエア（Figma: 36×36） */
+.storybook-semantic-color__square {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  /* 白・極淡色を識別しやすくする最小ボーダー */
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  display: block;
+}
+
+/* バリエーション名ブロック（Figma: w-166px gap-4px） */
+.storybook-semantic-color__name-block {
+  width: 166px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  /* Info ブロック内の gap-48px はrow で吸収 */
+  margin-right: 8px; /* gap-40px + name-block分の調整 */
+}
+
+.storybook-semantic-color__variation {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  line-height: 1.5;
+  opacity: 0.9;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.storybook-semantic-color__primitive {
+  font-size: 14px;
+  font-weight: 300;
+  color: #222;
+  line-height: 1.5;
+  opacity: 0.9;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* 用途テキスト（Figma: font/m 14px, W3） */
+.storybook-semantic-color__use {
+  font-size: 14px;
+  font-weight: 300;
+  color: #222;
+  line-height: 1.5;
+  opacity: 0.9;
+  margin: 0;
+}

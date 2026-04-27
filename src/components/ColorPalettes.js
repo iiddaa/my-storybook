@@ -1,133 +1,146 @@
 import './color-palettes.css';
 
 /**
- * スケールカラー（10段階）: Gray / Blue
- * Figma "Design-System-2.0--AI-Native-" Color Palettes ページより。
- * ・Gray 300 = #adb2b8、Gray 400 = #858c94、Gray 500 = #5c6670 はコードベース確認済み
- * ・Blue 500 = #318bf7、Blue 600 = #1e74db はデザインシステムトークン確認済み
- * ・Blue 100 = #eaf3fe、Gray 100 = #eff0f1 は InformationPanel スタイルより確認済み
- * ・それ以外の中間値はパレット補完による推定値
+ * Figma "Design-System-2.0--AI-Native-" Color Palettes (Primitives) より。
+ * node-id: 363:6854
+ *
+ * グループ順・カラー値はFigma準拠。
+ * 表示形式: Name | Preview（横長バー）| Value の3カラムテーブル。
  */
-const SCALES = [
+const GROUPS = [
   {
     name: 'Gray',
     swatches: [
       { step: '900', color: '#222222' },
-      { step: '800', color: '#2a2f35', muted: true },
-      { step: '700', color: '#3a404a', muted: true },
-      { step: '600', color: '#4b5259' },
-      { step: '500', color: '#5c6670' },
-      { step: '400', color: '#858c94' },
-      { step: '300', color: '#adb2b8' },
-      { step: '200', color: '#dde0e3' },
-      { step: '100', color: '#eff0f1' },
-      { step: '50',  color: '#f7f7f8' },
+      { step: '800', color: '#333C45' },
+      { step: '700', color: '#454F59' },
+      { step: '600', color: '#515A65' },
+      { step: '500', color: '#5C6670' },
+      { step: '400', color: '#858C94' },
+      { step: '300', color: '#ADB2B8' },
+      { step: '200', color: '#D6D9DB' },
+      { step: '100', color: '#EFF0F1' },
+      { step: '50',  color: '#F7F7F8' },
     ],
   },
   {
     name: 'Blue',
     swatches: [
-      { step: '900', color: '#0a1f40' },
-      { step: '800', color: '#0d2f61', muted: true },
-      { step: '700', color: '#1247a1', muted: true },
-      { step: '600', color: '#1e74db' },
-      { step: '500', color: '#318bf7' },
-      { step: '400', color: '#619ff0' },
-      { step: '300', color: '#8fbff4' },
-      { step: '200', color: '#c5dff9' },
-      { step: '100', color: '#eaf3fe' },
-      { step: '50',  color: '#f5f9ff' },
+      { step: '900', color: '#053066' },
+      { step: '800', color: '#0A458F' },
+      { step: '700', color: '#125CB8' },
+      { step: '600', color: '#1E74DB' },
+      { step: '500', color: '#318BF7' },
+      { step: '400', color: '#64A8F9' },
+      { step: '300', color: '#98C5FB' },
+      { step: '200', color: '#CBE2FD' },
+      { step: '100', color: '#EAF3FE' },
+      { step: '50',  color: '#F5F9FF' },
     ],
   },
-  {
-    name: 'Neutral',
-    swatches: [
-      { step: 'Black', color: '#222222' },
-      { step: 'White', color: '#ffffff' },
-    ],
-  },
-];
-
-/**
- * アクセントカラー（各2段階、Yellow のみ1段階）
- */
-const ACCENTS = [
   {
     name: 'Red',
     swatches: [
-      { step: '500', color: '#eb4d38' },
-      { step: '100', color: '#fdf2f0' },
+      { step: '500', color: '#EB4D38' },
+      { step: '100', color: '#FDF2F0' },
     ],
   },
   {
     name: 'Green',
     swatches: [
-      { step: '500', color: '#22a76a' },
-      { step: '100', color: '#e4f5ef' },
+      { step: '500', color: '#22AD7F' },
+      { step: '100', color: '#E4F5EF' },
     ],
   },
   {
     name: 'Orange',
     swatches: [
-      { step: '500', color: '#f78f43' },
-      { step: '100', color: '#fef4ed' },
+      { step: '500', color: '#F78F43' },
+      { step: '100', color: '#FEF4ED' },
     ],
   },
   {
     name: 'Yellow',
     swatches: [
-      { step: '500', color: '#f5c842' },
+      { step: '500', color: '#FBBC04' },
+    ],
+  },
+  {
+    name: 'Neutral',
+    swatches: [
+      { step: 'Black', color: '#000000' },
+      { step: 'White', color: '#FFFFFF' },
     ],
   },
 ];
 
 /**
  * カラーグループのDOM要素を生成する内部ヘルパー。
+ * Name | Preview（横長バー）| Value の3カラムテーブル形式で表示する。
  *
  * @param {Object}   group
  * @param {string}   group.name
- * @param {Array<{step: string, color: string, muted?: boolean}>} group.swatches
+ * @param {Array<{step: string, color: string}>} group.swatches
  * @returns {HTMLElement}
  */
 function createGroup({ name, swatches }) {
-  const group = document.createElement('div');
-  group.className = 'storybook-color-palettes__group';
+  const section = document.createElement('div');
+  section.className = 'storybook-color-palettes__group';
 
-  const groupName = document.createElement('span');
-  groupName.className = 'storybook-color-palettes__group-name';
-  groupName.textContent = name;
-  group.appendChild(groupName);
+  const groupTitle = document.createElement('p');
+  groupTitle.className = 'storybook-color-palettes__group-name';
+  groupTitle.textContent = name;
+  section.appendChild(groupTitle);
 
-  const swatchList = document.createElement('div');
-  swatchList.className = 'storybook-color-palettes__swatches';
+  const table = document.createElement('div');
+  table.className = 'storybook-color-palettes__table';
 
-  swatches.forEach(({ step, color, muted }) => {
+  // ヘッダー行
+  const headerRow = document.createElement('div');
+  headerRow.className =
+    'storybook-color-palettes__table-row storybook-color-palettes__table-row--header';
+  ['Name', 'Preview', 'Value'].forEach((label) => {
+    const cell = document.createElement('span');
+    cell.className = 'storybook-color-palettes__cell';
+    cell.textContent = label;
+    headerRow.appendChild(cell);
+  });
+  table.appendChild(headerRow);
+
+  // データ行
+  swatches.forEach(({ step, color }) => {
     const row = document.createElement('div');
-    row.className = 'storybook-color-palettes__swatch';
+    row.className = 'storybook-color-palettes__table-row';
 
-    const label = document.createElement('span');
-    label.className = [
-      'storybook-color-palettes__swatch-step',
-      muted ? 'storybook-color-palettes__swatch-step--muted' : '',
-    ]
-      .filter(Boolean)
-      .join(' ');
-    label.textContent = step;
+    const nameCell = document.createElement('span');
+    nameCell.className =
+      'storybook-color-palettes__cell storybook-color-palettes__cell--name';
+    nameCell.textContent = step;
 
-    const circle = document.createElement('span');
-    circle.className = 'storybook-color-palettes__swatch-circle';
-    circle.style.backgroundColor = color;
-    circle.setAttribute('role', 'img');
-    circle.setAttribute('aria-label', `${name} ${step} — ${color}`);
-    circle.setAttribute('title', color);
+    const previewCell = document.createElement('span');
+    previewCell.className =
+      'storybook-color-palettes__cell storybook-color-palettes__cell--preview';
+    const bar = document.createElement('span');
+    bar.className = 'storybook-color-palettes__bar';
+    bar.style.backgroundColor = color;
+    bar.setAttribute('role', 'img');
+    bar.setAttribute('aria-label', `${name} ${step} — ${color}`);
+    bar.setAttribute('title', color);
+    previewCell.appendChild(bar);
 
-    row.appendChild(label);
-    row.appendChild(circle);
-    swatchList.appendChild(row);
+    const valueCell = document.createElement('span');
+    valueCell.className =
+      'storybook-color-palettes__cell storybook-color-palettes__cell--value';
+    valueCell.textContent = color.toUpperCase();
+
+    row.appendChild(nameCell);
+    row.appendChild(previewCell);
+    row.appendChild(valueCell);
+    table.appendChild(row);
   });
 
-  group.appendChild(swatchList);
-  return group;
+  section.appendChild(table);
+  return section;
 }
 
 /**
@@ -135,6 +148,7 @@ function createGroup({ name, swatches }) {
  *
  * デザインシステムのプリミティブカラーパレット（Color Palettes / Primitives）を
  * 視覚的に一覧表示するドキュメンテーションコンポーネント。
+ * Figma node-id: 363:6854
  *
  * @param {Object}  [props]
  * @param {string}  [props.className=''] - 追加クラス名
@@ -147,10 +161,9 @@ export const createColorPalettes = ({ className = '' } = {}) => {
   // ── Head ──
   const head = document.createElement('div');
   head.className = 'storybook-color-palettes__head';
-
   const title = document.createElement('h1');
   title.className = 'storybook-color-palettes__title';
-  title.textContent = 'Color Palettes';
+  title.textContent = 'Color Palettes (Primitives)';
   head.appendChild(title);
   root.appendChild(head);
 
@@ -163,24 +176,16 @@ export const createColorPalettes = ({ className = '' } = {}) => {
 
   const sectionTitle = document.createElement('p');
   sectionTitle.className = 'storybook-color-palettes__section-title';
-  sectionTitle.textContent = 'Color Palettes (Primitives)';
+  sectionTitle.textContent = 'Primitive Color';
   section.appendChild(sectionTitle);
 
-  // Card
   const card = document.createElement('div');
   card.className = 'storybook-color-palettes__card';
 
-  // Scales row: Gray / Blue / Neutral
-  const scalesRow = document.createElement('div');
-  scalesRow.className = 'storybook-color-palettes__scales';
-  SCALES.forEach((group) => scalesRow.appendChild(createGroup(group)));
-  card.appendChild(scalesRow);
-
-  // Accents row: Red / Green / Orange / Yellow
-  const accentsRow = document.createElement('div');
-  accentsRow.className = 'storybook-color-palettes__accents';
-  ACCENTS.forEach((group) => accentsRow.appendChild(createGroup(group)));
-  card.appendChild(accentsRow);
+  const primitives = document.createElement('div');
+  primitives.className = 'storybook-color-palettes__primitives';
+  GROUPS.forEach((group) => primitives.appendChild(createGroup(group)));
+  card.appendChild(primitives);
 
   section.appendChild(card);
   body.appendChild(section);

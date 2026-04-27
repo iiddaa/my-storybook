@@ -48,7 +48,7 @@ const COMPONENT_DESCRIPTION = `
 // Meta
 // ─────────────────────────────────────────────────────────────
 export default {
-  title: 'RadioButton',
+  title: 'Components/RadioButton',
   tags: ['autodocs'],
   render: (args) => createRadioButton(args),
   parameters: {

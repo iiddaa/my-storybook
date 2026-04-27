@@ -49,7 +49,7 @@ const COMPONENT_DESCRIPTION = `
 // Meta
 // ─────────────────────────────────────────────────────────────
 export default {
-  title: 'Dialog',
+  title: 'Components/Dialog',
   tags: ['autodocs'],
   render: (args) => createDialog(args),
   parameters: {

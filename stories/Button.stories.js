@@ -54,7 +54,7 @@ const COMPONENT_DESCRIPTION = `
 // Meta
 // ─────────────────────────────────────────────────────────────
 export default {
-  title: 'Button',
+  title: 'Components/Button',
   tags: ['autodocs'],
   render: (args) => createButton(args),
   parameters: {

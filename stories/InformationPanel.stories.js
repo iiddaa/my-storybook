@@ -43,7 +43,7 @@ const COMPONENT_DESCRIPTION = `
 // Meta
 // ─────────────────────────────────────────────────────────────
 export default {
-  title: 'InformationPanel',
+  title: 'Components/InformationPanel',
   tags: ['autodocs'],
   render: (args) => createInformationPanel(args),
   parameters: {

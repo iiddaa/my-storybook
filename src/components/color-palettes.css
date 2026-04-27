@@ -56,80 +56,92 @@
 /* ─── Card ─── */
 
 .storybook-color-palettes__card {
-  background: #f7f7f8;
+  background: #fff;
   border-radius: 16px;
   padding: 40px;
+}
+
+/* ─── Primitives（縦1列、グループ間 gap-40px） ─── */
+
+.storybook-color-palettes__primitives {
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
 
-/* ─── Scales row / Accents row ─── */
-
-.storybook-color-palettes__scales,
-.storybook-color-palettes__accents {
-  display: flex;
-  align-items: flex-start;
-  gap: 40px;
-}
-
-/* ─── Color Group ─── */
+/* ─── Group（グループタイトル + テーブル） ─── */
 
 .storybook-color-palettes__group {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  width: 116px;
-  flex-shrink: 0;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .storybook-color-palettes__group-name {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
   color: #222;
   line-height: 1.5;
-  flex-shrink: 0;
-  /* 最初のスウォッチと垂直位置を揃える */
-  padding-top: 3px;
-}
-
-/* ─── Swatches ─── */
-
-.storybook-color-palettes__swatches {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 60px;
-  flex-shrink: 0;
-}
-
-.storybook-color-palettes__swatch {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 60px;
-}
-
-.storybook-color-palettes__swatch-step {
-  font-size: 12px;
-  font-weight: 300;
-  color: #222;
-  line-height: 1.5;
-  white-space: nowrap;
+  margin: 0;
   font-family: 'Hiragino Sans', sans-serif;
 }
 
-/* Figma準拠：Gray/Blue の 800・700 ステップはミュートカラーで表示 */
-.storybook-color-palettes__swatch-step--muted {
-  color: #adb2b8;
+/* ─── Table ─── */
+
+.storybook-color-palettes__table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #d6d9db;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-.storybook-color-palettes__swatch-circle {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  flex-shrink: 0;
-  /* 白・極淡色スウォッチをカード背景に対して識別しやすくする最小ボーダー */
-  border: 1px solid rgba(0, 0, 0, 0.07);
+/* ─── Table Row (Name | Preview | Value) ─── */
+
+.storybook-color-palettes__table-row {
+  display: grid;
+  grid-template-columns: 150px 1fr 160px;
+  border-bottom: 1px solid #d6d9db;
+  background: #fff;
+}
+
+.storybook-color-palettes__table-row:last-child {
+  border-bottom: none;
+}
+
+.storybook-color-palettes__table-row--header {
+  background: #f7f7f8;
+}
+
+/* ─── Cell ─── */
+
+.storybook-color-palettes__cell {
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #222;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  font-family: 'Hiragino Sans', sans-serif;
+}
+
+.storybook-color-palettes__table-row--header .storybook-color-palettes__cell {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.storybook-color-palettes__cell--preview {
+  padding: 8px 16px;
+}
+
+/* ─── Color Bar ─── */
+
+.storybook-color-palettes__bar {
   display: block;
+  width: 100%;
+  height: 40px;
+  /* 白・極淡色をカード背景に対して識別しやすくする最小ボーダー */
+  border: 1px solid rgba(0, 0, 0, 0.07);
 }

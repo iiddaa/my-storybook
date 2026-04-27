@@ -69,7 +69,7 @@ Taskタイプ（Full Screen：L）
 // Meta
 // ─────────────────────────────────────────────────────────────
 export default {
-  title: 'Modal',
+  title: 'Components/Modal',
   tags: ['autodocs'],
   render: (args) => createModal(args),
   parameters: {

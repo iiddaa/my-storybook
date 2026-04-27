@@ -1,0 +1,176 @@
+/* ─────────────────────────────────────────────────────────────
+   Typography ドキュメンテーションコンポーネント
+   Semantic Color 対応:
+     Text/Inverse    (#FFFFFF)    → head タイトル
+     Text/Main       (#222222)    → 本文・テーブル全般
+     Text/Link       (#318BF7)    → head 背景 / Link プレビューテキスト
+     BG/Main         (#FFFFFF)    → 行背景
+     BG/Sub          (#F7F7F8)    → カード背景
+     BG/Notice       (#EFF0F1)    → テーブルヘッダー行背景
+───────────────────────────────────────────────────────────── */
+
+.storybook-typography {
+  font-family: 'Hiragino Sans', sans-serif;
+  color: #222222; /* Text/Main */
+  line-height: 1.5;
+  min-width: 800px;
+}
+
+/* ── Head ── */
+.storybook-typography__head {
+  background: #318bf7; /* Text/Link = Icon/Link = Border/Accent → Blue/500 */
+  padding: 40px 80px;
+  border-radius: 16px 16px 0 0;
+}
+
+.storybook-typography__head-title {
+  margin: 0;
+  font-size: 56px;
+  font-weight: 700;
+  color: #ffffff; /* Text/Inverse */
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+/* ── Body ── */
+.storybook-typography__body {
+  background: #ffffff; /* BG/Main */
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+/* ── セクション ── */
+.storybook-typography__section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.storybook-typography__section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 955px;
+}
+
+.storybook-typography__section-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #222222; /* Text/Main */
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.storybook-typography__section-desc {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 300;
+  color: #222222; /* Text/Main */
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+/* ── カード ── */
+.storybook-typography__card {
+  background: #f7f7f8; /* BG/Sub */
+  border-radius: 16px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ── テーブルヘッダー行 ── */
+.storybook-typography__table-header {
+  background: #eff0f1; /* BG/Notice */
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+  padding: 8px 40px 8px 20px;
+}
+
+.storybook-typography__table-label {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #222222; /* Text/Main */
+  line-height: 1;
+  letter-spacing: 0.04em;
+  opacity: 0.9;
+}
+
+/* Preview列 */
+.storybook-typography__table-header .storybook-typography__table-label:nth-child(1) {
+  width: 100px;
+  flex-shrink: 0;
+}
+
+/* Variation列 */
+.storybook-typography__table-header .storybook-typography__table-label:nth-child(2) {
+  width: 200px;
+  flex-shrink: 0;
+}
+
+/* Use列 */
+.storybook-typography__table-header .storybook-typography__table-label:nth-child(3) {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ── エントリ行 ── */
+.storybook-typography__row {
+  background: #ffffff; /* BG/Main */
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding: 16px 40px 16px 20px;
+  height: 64px;
+  box-sizing: border-box;
+}
+
+/* ── Preview セル ── */
+.storybook-typography__preview {
+  width: 100px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.storybook-typography__preview-text {
+  color: #222222; /* Text/Main */
+  line-height: 1.5;
+  opacity: 0.9;
+  white-space: nowrap;
+  font-family: 'Hiragino Sans', sans-serif;
+}
+
+.storybook-typography__preview-text--link {
+  color: #318bf7; /* Text/Link */
+  text-decoration: underline;
+  text-decoration-style: solid;
+}
+
+/* ── Variation セル ── */
+.storybook-typography__variation {
+  width: 200px;
+  flex-shrink: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #222222; /* Text/Main */
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+/* ── Use セル ── */
+.storybook-typography__use {
+  flex: 1;
+  min-width: 0;
+  font-size: 14px;
+  font-weight: 300;
+  color: #222222; /* Text/Main */
+  line-height: 1.5;
+  opacity: 0.9;
+}

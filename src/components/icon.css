@@ -1,0 +1,162 @@
+/* ─────────────────────────────────────────────────────────────
+   Icon ドキュメンテーションコンポーネント
+   Semantic Color 対応:
+     text/paper        (#FFFFFF)
+     text/ink          (#222222)
+     text/accent-dark  (#1E74DB)
+     background/accent (#318BF7)  → head 背景
+     background/content(#D6D9DB)  → card 背景
+     background/paper-light(#F7F7F8) → grid bg
+     border/main       (#D6D9DB)
+───────────────────────────────────────────────────────────── */
+
+.storybook-icon {
+  font-family: 'Hiragino Sans', sans-serif;
+  color: #222222; /* text/ink */
+  line-height: 1.5;
+  min-width: 760px;
+}
+
+/* ── Head ── */
+.storybook-icon__head {
+  background: #318bf7; /* background/accent = Blue/500 */
+  padding: 24px 32px;
+}
+
+.storybook-icon__title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff; /* text/paper */
+}
+
+/* ── Body ── */
+.storybook-icon__body {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* ── 概念セクション ── */
+.storybook-icon__concept {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.storybook-icon__concept-label-row {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.storybook-icon__concept-label {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1e74db; /* text/accent-dark = Blue/600 */
+  white-space: nowrap;
+}
+
+.storybook-icon__concept-tagline {
+  margin: 0;
+  font-size: 12px;
+  color: #858c94; /* text/ink-light = Gray/500 */
+}
+
+.storybook-icon__concept-body {
+  margin: 0;
+  font-size: 14px;
+  color: #222222; /* text/ink */
+}
+
+/* ── セクション共通 ── */
+.storybook-icon__section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.storybook-icon__section-heading {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e74db; /* text/accent-dark */
+}
+
+/* ── カード ── */
+.storybook-icon__card {
+  background: #d6d9db; /* background/content = Gray/200 */
+  border-radius: 8px;
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  overflow: hidden;
+}
+
+/* ── グループ ── */
+.storybook-icon__group {
+  background: #ffffff; /* background/paper = Neutral/White */
+  padding: 16px 20px;
+}
+
+.storybook-icon__group-label {
+  margin: 0 0 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #222222; /* text/ink */
+}
+
+/* ── アイコングリッド ── */
+.storybook-icon__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  background: #f7f7f8; /* background/paper-light = Gray/50 */
+  border-radius: 4px;
+  padding: 12px;
+}
+
+/* ── 個別アイコンアイテム ── */
+.storybook-icon__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 72px;
+  padding: 10px 4px 8px;
+  background: #ffffff; /* background/paper */
+  border-radius: 4px;
+}
+
+.storybook-icon__item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #222222; /* icon/ink = text/ink */
+  line-height: 0;
+}
+
+.storybook-icon__item-name {
+  font-size: 10px;
+  color: #858c94; /* text/ink-light */
+  text-align: center;
+  word-break: break-all;
+  line-height: 1.3;
+}
+
+/* ── 注意事項リスト ── */
+.storybook-icon__notes-list {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.storybook-icon__notes-item {
+  font-size: 13px;
+  color: #222222; /* text/ink */
+}

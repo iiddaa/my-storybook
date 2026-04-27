@@ -44,7 +44,7 @@ const COMPONENT_DESCRIPTION = `
 // Meta
 // ─────────────────────────────────────────────────────────────
 export default {
-  title: 'Breadcrumbs',
+  title: 'Components/Breadcrumbs',
   tags: ['autodocs'],
   render: (args) => createBreadcrumbs(args),
   parameters: {
