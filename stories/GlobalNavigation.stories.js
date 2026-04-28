@@ -82,7 +82,7 @@ const DEFAULT_OPTIONS = [
 // Meta
 // ─────────────────────────────────────────────────────────────
 export default {
-  title: 'GlobalNavigation',
+  title: 'Layout/GlobalNavigation',
   tags: ['autodocs'],
   render: (args) => createGlobalNavigation(args),
   parameters: {
