@@ -38,23 +38,31 @@
   flex-shrink: 0;
 }
 
-.storybook-global-nav__logo {
+/* SVGロゴコンテナ（Figma: 136×61px, overflow:hidden） */
+.storybook-global-nav__logo-svg {
+  position: relative;
   width: 136px;
   height: 61px;
-  object-fit: contain;
-  display: block;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
-.storybook-global-nav__logo-fallback {
-  width: 136px;
-  height: 61px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Hiragino Sans', sans-serif;
-  font-weight: 600;
-  font-size: 20px;
-  color: #1e74db;
+/* カンリーワードマーク（上段）: inset 0 0 49.81% 0 */
+.storybook-global-nav__logo-svg-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 49.81%;
+  left: 0;
+}
+
+/* 店舗集客タグライン（下段）: inset 70.98% 0 0 0 */
+.storybook-global-nav__logo-svg-bottom {
+  position: absolute;
+  top: 70.98%;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 /* ── Section ── */
