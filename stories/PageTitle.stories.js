@@ -36,7 +36,7 @@ const COMPONENT_DESCRIPTION = `
 // Meta
 // ─────────────────────────────────────────────────────────────
 export default {
-  title: 'PageTitle',
+  title: 'Layout/PageTitle',
   tags: ['autodocs'],
   render: (args) => createPageTitle(args),
   parameters: {

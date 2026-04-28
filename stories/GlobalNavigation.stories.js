@@ -41,9 +41,6 @@ const COMPONENT_DESCRIPTION = `
 // ─────────────────────────────────────────────────────────────
 // デフォルトデータ（Figmaの基本設計より）
 // ─────────────────────────────────────────────────────────────
-const LOGO_SRC =
-  'https://www.figma.com/api/mcp/asset/ec44eb76-3490-4a31-8912-d5c69e313f6a';
-
 const DEFAULT_SECTIONS = [
   {
     label: '管理・運用',
@@ -85,7 +82,7 @@ const DEFAULT_OPTIONS = [
 // Meta
 // ─────────────────────────────────────────────────────────────
 export default {
-  title: 'GlobalNavigation',
+  title: 'Layout/GlobalNavigation',
   tags: ['autodocs'],
   render: (args) => createGlobalNavigation(args),
   parameters: {
@@ -97,11 +94,6 @@ export default {
     },
   },
   argTypes: {
-    logo: {
-      control: 'object',
-      description:
-        'ロゴ設定。src（画像URL）と alt（代替テキスト）を指定する。省略時は alt のテキストをフォールバック表示する。',
-    },
     sections: {
       control: 'object',
       description:
@@ -119,7 +111,6 @@ export default {
     },
   },
   args: {
-    logo: { src: LOGO_SRC, alt: 'カンリー' },
     sections: DEFAULT_SECTIONS,
     options: DEFAULT_OPTIONS,
     activeItemId: undefined,
@@ -203,7 +194,6 @@ export const Minimal = {
     },
   },
   args: {
-    logo: undefined,
     sections: [
       {
         label: '管理・運用',

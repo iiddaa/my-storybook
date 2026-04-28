@@ -1,12 +1,4 @@
-import './global-navigation.css';
-
-// ─────────────────────────────────────────────────────────────
-// ブランドロゴ SVG（Figma node-id: 443:4493）
-// brand-logo / canly_store-marketing_logo
-// ─────────────────────────────────────────────────────────────
-
-/** カンリーワードマーク（上段）136×30.6146 */
-const LOGO_SVG_TOP = `<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" viewBox="0 0 136 30.6146" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+import{n as e}from"./chunk-DnJy8xQt.js";var t=e((()=>{}));function n(){let e=document.createElement(`div`);e.className=`storybook-global-nav__logo-svg`,e.setAttribute(`role`,`img`),e.setAttribute(`aria-label`,`カンリー`);let t=document.createElement(`div`);t.className=`storybook-global-nav__logo-svg-top`,t.innerHTML=a;let n=document.createElement(`div`);return n.className=`storybook-global-nav__logo-svg-bottom`,n.innerHTML=o,e.appendChild(t),e.appendChild(n),e}function r({label:e,icon:t,items:n=[]},r){let a=document.createElement(`div`);a.className=`storybook-global-nav__section`;let o=document.createElement(`div`);o.className=`storybook-global-nav__section-head`;let c=document.createElement(`span`);c.className=`storybook-global-nav__section-icon`,c.innerHTML=s[t]??``;let l=document.createElement(`span`);l.className=`storybook-global-nav__section-label`,l.textContent=e,o.appendChild(c),o.appendChild(l),a.appendChild(o);let u=document.createElement(`div`);return u.className=`storybook-global-nav__section-list`,n.forEach(e=>{u.appendChild(i({...e,active:e.id===r}))}),a.appendChild(u),a}function i({label:e,href:t,onClick:n,badge:r,active:i}){let a=document.createElement(`a`);a.className=`storybook-global-nav__item`+(i?` storybook-global-nav__item--active`:``),a.href=t??`#`,i&&a.setAttribute(`aria-current`,`page`),n&&a.addEventListener(`click`,e=>{e.preventDefault(),n(e)});let o=document.createElement(`span`);if(o.className=`storybook-global-nav__item-label`,o.textContent=e,a.appendChild(o),r){let e=document.createElement(`span`);e.className=`storybook-global-nav__badge`,e.textContent=r,a.appendChild(e)}return a}var a,o,s,c,l=e((()=>{t(),a=`<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" viewBox="0 0 136 30.6146" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
   <g>
     <g>
       <path opacity="0.1" d="M52.1456 13.0398C44.8815 19.1639 40.9698 26.496 43.4082 29.4163L38.366 23.3783C35.9276 20.4591 39.8405 13.1271 47.1033 7.00173C54.3674 0.877576 62.2312 -1.72109 64.6696 1.19807L69.7119 7.23613C67.2735 4.31696 59.4096 6.91443 52.1456 13.0398Z" fill="#34BBFC"/>
@@ -31,10 +23,7 @@ const LOGO_SVG_TOP = `<svg preserveAspectRatio="none" width="100%" height="100%"
       <stop offset="1" stop-color="#2697FC"/>
     </linearGradient>
   </defs>
-</svg>`;
-
-/** 店舗集客タグライン（下段）136×17.6992 */
-const LOGO_SVG_BOTTOM = `<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" viewBox="0 0 136 17.6992" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+</svg>`,o=`<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" viewBox="0 0 136 17.6992" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
   <g>
     <path d="M135.286 0.717535V16.9817H0.714029V0.717535H135.286ZM136 0H0V17.6992H136V0Z" fill="#3775E6"/>
     <g>
@@ -44,16 +33,7 @@ const LOGO_SVG_BOTTOM = `<svg preserveAspectRatio="none" width="100%" height="10
       <path d="M86.6689 11.7532C86.6689 11.5045 86.6689 11.3801 86.657 11.1433C86.1738 11.2677 85.9394 11.3299 85.2587 11.4794C85.1099 10.9938 84.9243 10.5968 84.6767 10.2727C85.5931 10.1364 86.5213 9.9247 87.4496 9.63888C88.0565 9.44036 88.5884 9.22869 89.2941 8.90461C88.7872 8.54345 88.5016 8.30786 88.0934 7.90962C87.3389 8.50637 86.9295 8.75512 85.9394 9.24065C85.7418 8.86753 85.5181 8.59367 85.1849 8.27078C86.4594 7.7111 87.3508 7.12631 88.329 6.19352C88.6384 5.9077 88.861 5.62188 89.0216 5.32291H86.4225V6.96487H85.0861C85.1361 6.65394 85.148 6.41715 85.148 6.03207V5.02514C85.148 4.65202 85.1361 4.39131 85.098 4.1043C85.5193 4.15453 85.9275 4.16649 86.5094 4.16649H89.7023V3.99188C89.7023 3.63072 89.7023 3.56854 89.6404 3.1715H91.1756C91.1256 3.3461 91.1018 3.68095 91.1018 3.97992V4.16649H94.4066C95.0504 4.16649 95.4217 4.15453 95.8549 4.1043C95.818 4.365 95.8049 4.6269 95.8049 5.02514V6.05719C95.8049 6.44227 95.8168 6.72928 95.8668 6.98998H94.5173V5.32291H89.1954L90.3461 5.6458C90.3342 5.65776 90.2105 5.80725 89.9629 6.09307H92.2895C92.7346 6.09307 93.0321 6.0811 93.2915 6.04284L94.146 6.72689C94.0714 6.80183 93.9599 6.92222 93.8116 7.08805C93.0571 7.87136 92.4252 8.40592 91.7195 8.90341C93.0071 9.46309 94.4542 9.79913 96.2988 9.96058C96.0013 10.4832 95.9025 10.7188 95.7299 11.3538C95.1361 11.2414 94.9623 11.2043 94.3804 11.068C94.3685 11.3909 94.3685 11.4291 94.3685 11.764V13.4932C94.3685 14.0278 94.3804 14.2765 94.4304 14.6377H93.0571V14.1773H87.9708V14.6246H86.6094C86.6463 14.2263 86.6713 13.8664 86.6713 13.4801V11.7508L86.6689 11.7532ZM93.1535 10.7331C92.2133 10.4593 91.4208 10.1364 90.5175 9.65084C89.663 10.1113 89.0942 10.36 87.9553 10.7331H93.1535ZM87.9684 13.0472H93.0547V11.8656H87.9684V13.0472ZM88.9585 7.1885C89.5655 7.69795 89.9237 7.9467 90.4806 8.28274C91.0744 7.90962 91.3589 7.7111 92.0277 7.13827H89.0073L88.9574 7.1885H88.9585Z" fill="#3775E6"/>
     </g>
   </g>
-</svg>`;
-
-// ─────────────────────────────────────────────────────────────
-// アイコン（インライン SVG）
-// Figma node-id: 8:1177 より。セマンティックカラー適用済み。
-// Yellow/500=#FBBC04  Blue/500=#318BF7  Red/500=#EB4D38
-// ─────────────────────────────────────────────────────────────
-const SVG_ICONS = {
-  // store_nav: Figma node-id 152:86（24×24）建物本体（Yellow/500）＋ 窓3つ（Blue/500）
-  store: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+</svg>`,s={store:`<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <g transform="translate(4,10)">
       <path d="M0 0V10C0 10.55 0.45 11 1 11H6.01V7C6.01 6.45 6.46 6 7.01 6H9.01C9.56 6 10.01 6.45 10.01 7V11H15C15.55 11 16 10.55 16 10V0H0Z" fill="#FBBC04"/>
     </g>
@@ -66,9 +46,7 @@ const SVG_ICONS = {
     <g transform="translate(15,3)">
       <path d="M0 0H5C5.55 0 6 0.45 6 1V7C6 8.66 4.66 10 3 10C1.34 10 0 8.66 0 7V0Z" fill="#318BF7"/>
     </g>
-  </svg>`,
-  // analysis_nav: Figma node-id 152:91（24×24）棒グラフ 左(Blue/500)・中(Yellow/500)・右(Red/500)
-  analysis: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  </svg>`,analysis:`<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <g transform="translate(3,11)">
       <path d="M1 0H4C4.55 0 5 0.45 5 1V9.5C5 9.78 4.78 10 4.5 10H0.5C0.22 10 0 9.78 0 9.5V1C0 0.45 0.45 0 1 0Z" fill="#318BF7"/>
     </g>
@@ -78,160 +56,107 @@ const SVG_ICONS = {
     <g transform="translate(16,3)">
       <path d="M1 0H4C4.55 0 5 0.45 5 1V17.5C5 17.78 4.78 18 4.5 18H0.5C0.22 18 0 17.78 0 17.5V1C0 0.45 0.45 0 1 0Z" fill="#EB4D38"/>
     </g>
-  </svg>`,
-  // gear_nav: Figma node-id 152:94（24×24、2pxパディング）ギア（Blue/500）
-  gear: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  </svg>`,gear:`<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <g transform="translate(2,2)">
       <path d="M0.0219292 6.93C0.470734 5.59 1.23266 4.35 2.21376 3.3C2.38076 3.12 2.64169 3.06 2.87132 3.14L5.24059 3.95C5.8877 4.17 6.587 3.85 6.81662 3.24C6.84793 3.18 6.85837 3.11 6.86881 3.06L7.31761 0.7C7.35936 0.47 7.55767 0.28 7.79773 0.23C8.5179 0.08 9.25895 0 10 0C10.741 0 11.4821 0.08 12.1918 0.22C12.4319 0.27 12.6302 0.45 12.672 0.69L13.1208 3.05C13.246 3.69 13.8827 4.12 14.5611 4C14.6342 4 14.6968 3.97 14.749 3.95L17.1182 3.14C17.3583 3.06 17.6192 3.12 17.7758 3.3C18.7673 4.34 19.5188 5.58 19.9676 6.93C20.0511 7.16 19.9676 7.41 19.7798 7.56L17.8697 9.11C17.3479 9.53 17.2852 10.28 17.734 10.77C17.7758 10.82 17.8175 10.86 17.8697 10.9L19.7798 12.45C19.9676 12.61 20.0407 12.85 19.9676 13.08C19.5188 14.42 18.7569 15.66 17.7758 16.71C17.6088 16.89 17.3479 16.95 17.1182 16.87L14.749 16.06C14.1019 15.84 13.4026 16.16 13.1729 16.77C13.1416 16.83 13.1312 16.9 13.1208 16.95L12.672 19.31C12.6302 19.54 12.4319 19.73 12.1918 19.78C11.4821 19.92 10.741 20 10 20C9.25895 20 8.5179 19.92 7.80816 19.78C7.56811 19.73 7.3698 19.55 7.32805 19.31L6.87924 16.95C6.754 16.31 6.11732 15.88 5.43889 16C5.36583 16 5.30321 16.03 5.25102 16.05L2.88175 16.86C2.64169 16.94 2.38076 16.88 2.2242 16.7C1.23266 15.66 0.481171 14.42 0.0323665 13.07C-0.051132 12.84 0.0323663 12.59 0.220238 12.44L2.13027 10.89C2.65213 10.47 2.71476 9.72 2.26595 9.23C2.2242 9.18 2.18245 9.14 2.13027 9.1L0.220238 7.55C0.0323663 7.39 -0.0406947 7.15 0.0323665 6.92L0.0219292 6.93ZM10.0104 13.35C11.9309 13.35 13.4965 11.86 13.4965 10.01C13.4965 8.16 11.9413 6.67 10.0104 6.67C8.07953 6.67 6.52437 8.16 6.52437 10.01C6.52437 11.86 8.07953 13.35 10.0104 13.35Z" fill="#318BF7"/>
     </g>
-  </svg>`,
-};
+  </svg>`},c=({sections:e=[],options:t=[],activeItemId:a})=>{let o=document.createElement(`nav`);o.className=`storybook-global-nav`,o.setAttribute(`aria-label`,`グローバルナビゲーション`);let s=document.createElement(`div`);s.className=`storybook-global-nav__nav-container`;let c=document.createElement(`div`);if(c.className=`storybook-global-nav__logo-area`,c.appendChild(n()),s.appendChild(c),e.forEach(e=>{s.appendChild(r(e,a))}),o.appendChild(s),t.length>0){let e=document.createElement(`div`);e.className=`storybook-global-nav__options-container`;let n=document.createElement(`div`);n.className=`storybook-global-nav__options-list`,t.forEach(e=>{n.appendChild(i({...e,active:!1}))}),e.appendChild(n),o.appendChild(e)}return o}})),u,d,f,p,m,h,g,_,v,y;e((()=>{l(),{fn:u}=__STORYBOOK_MODULE_TEST__,d=`
+## 概念
 
-/**
- * グローバルナビゲーション
- *
- * Figmaガイドライン（Design-System-2.0--AI-Native- / Global Navigation）:
- * - 主要機能を切り替えるもの。
- * - いつでもすぐにアクセスできるよう、位置は固定で常に表示する。
- * - 項目数はできるだけ絞る。あくまで主要機能群。
- * - 現在地がわかるようにする。（なんのサービスの、どの主要機能を操作しているのか）
- *
- * @param {Object}   props
- * @param {Array}    props.sections                     - ナビセクション配列
- * @param {string}   props.sections[].label             - セクション見出し
- * @param {string}   props.sections[].icon              - アイコン種別: 'store' | 'analysis' | 'gear'
- * @param {Array}    props.sections[].items             - ナビアイテム配列
- * @param {string}   props.sections[].items[].id        - アイテムID（activeItemId との照合に使用）
- * @param {string}   props.sections[].items[].label     - 表示テキスト
- * @param {string}   [props.sections[].items[].href]    - リンク先URL
- * @param {Function} [props.sections[].items[].onClick] - クリックコールバック
- * @param {string}   [props.sections[].items[].badge]   - バッジテキスト（例: '99+', '7'）
- * @param {Array}    [props.options]                    - 下部オプション項目（ヘルプ・ログアウトなど）
- * @param {string}   props.options[].label             - 表示テキスト
- * @param {string}   [props.options[].href]            - リンク先URL
- * @param {Function} [props.options[].onClick]         - クリックコールバック
- * @param {string}   [props.activeItemId]              - アクティブ表示するアイテムのid
- * @returns {HTMLElement}
- */
-export const createGlobalNavigation = ({
-  sections = [],
-  options = [],
-  activeItemId,
-}) => {
-  const root = document.createElement('nav');
-  root.className = 'storybook-global-nav';
-  root.setAttribute('aria-label', 'グローバルナビゲーション');
+どういうものか。何のためにあるのか。根源的で、絶対に外しては成り立たない本質。
 
-  // ── Nav Container ──
-  const navContainer = document.createElement('div');
-  navContainer.className = 'storybook-global-nav__nav-container';
+> **主要機能を切り替えるもの。**
 
-  // Logo
-  const logoArea = document.createElement('div');
-  logoArea.className = 'storybook-global-nav__logo-area';
-  logoArea.appendChild(createLogoSvg());
-  navContainer.appendChild(logoArea);
+---
 
-  // Sections
-  sections.forEach((section) => {
-    navContainer.appendChild(createSection(section, activeItemId));
-  });
+## 基本設計
 
-  root.appendChild(navContainer);
+ナビゲーションは3つのエリアで構成される。
 
-  // ── Options Container ──
-  if (options.length > 0) {
-    const optionsContainer = document.createElement('div');
-    optionsContainer.className = 'storybook-global-nav__options-container';
+| エリア | 役割 |
+|---|---|
+| ロゴエリア | サービスロゴを表示する |
+| ナビセクション群 | 主要機能をグループ単位（セクション）で一覧表示する |
+| オプションエリア | ヘルプ・ログアウトなど補助的なアクション |
 
-    const optionsList = document.createElement('div');
-    optionsList.className = 'storybook-global-nav__options-list';
-    options.forEach((opt) => {
-      optionsList.appendChild(createNavItem({ ...opt, active: false }));
-    });
-    optionsContainer.appendChild(optionsList);
-    root.appendChild(optionsContainer);
+各セクションは「セクション見出し（アイコン＋ラベル）」と「ナビリスト（インデントされた項目一覧）」で構成される。
+
+バッジは件数通知が必要な項目にのみ付与する（例：クチコミ・投稿）。
+
+---
+
+## 使用時に気をつけておくこと
+
+- いつでもすぐにアクセスできるよう、位置は固定で常に表示する。
+- 項目数はできるだけ絞る。あくまで主要機能群。
+- 現在地がわかるようにする。（なんのサービスの、どの主要機能を操作しているのか）
+`,f=[{label:`管理・運用`,icon:`store`,items:[{id:`shop`,label:`店舗`,href:`#`},{id:`media`,label:`画像・動画`,href:`#`},{id:`menu`,label:`メニュー`,href:`#`},{id:`review`,label:`クチコミ`,href:`#`,badge:`99+`},{id:`post`,label:`投稿`,href:`#`,badge:`7`}]},{label:`分析`,icon:`analysis`,items:[{id:`views`,label:`閲覧・反応数`,href:`#`},{id:`review-summary`,label:`クチコミ総評`,href:`#`},{id:`keywords`,label:`検索キーワード`,href:`#`},{id:`ranking`,label:`検索順位`,href:`#`}]},{label:`設定`,icon:`gear`,items:[{id:`group`,label:`グループ`,href:`#`},{id:`user`,label:`ユーザー`,href:`#`}]}],p=[{label:`ヘルプ`,href:`#`},{label:`ログアウト`,href:`#`,onClick:u()}],m={title:`Layout/GlobalNavigation`,tags:[`autodocs`],render:e=>c(e),parameters:{layout:`padded`,docs:{description:{component:d}}},argTypes:{sections:{control:`object`,description:`ナビセクション配列。各セクションに label・icon（store / analysis / gear）・items を指定する。`},options:{control:`object`,description:`下部オプション項目（ヘルプ・ログアウトなど）。省略時はオプションエリア自体が非表示になる。`},activeItemId:{control:`text`,description:`現在地を示すアイテムの id。該当アイテムがアクティブ状態（背景色・テキスト色）で表示される。`}},args:{sections:f,options:p,activeItemId:void 0}},h={},g={parameters:{docs:{description:{story:"`activeItemId` にアイテムの id を渡すことで現在地を明示する（Figmaガイドライン）。"}}},args:{activeItemId:`review`}},_={parameters:{docs:{description:{story:`件数通知が必要なアイテムにのみ badge を付与する。Figmaの基本設計では「クチコミ（99+）」「投稿（7）」に表示。`}}},args:{sections:[{label:`管理・運用`,icon:`store`,items:[{id:`shop`,label:`店舗`,href:`#`},{id:`review`,label:`クチコミ`,href:`#`,badge:`99+`},{id:`post`,label:`投稿`,href:`#`,badge:`7`}]}],options:p}},v={parameters:{docs:{description:{story:`logo・options を省略可能。logo 省略時は alt テキストをフォールバック表示する。options 省略時はオプションエリアが非表示になる。`}}},args:{sections:[{label:`管理・運用`,icon:`store`,items:[{id:`shop`,label:`店舗`,href:`#`},{id:`menu`,label:`メニュー`,href:`#`}]}],options:[]}},h.parameters={...h.parameters,docs:{...h.parameters?.docs,source:{originalSource:`{}`,...h.parameters?.docs?.source},description:{story:`Figmaの基本設計そのままの構成。ロゴ・全セクション・バッジ・オプション付き。`,...h.parameters?.docs?.description}}},g.parameters={...g.parameters,docs:{...g.parameters?.docs,source:{originalSource:`{
+  parameters: {
+    docs: {
+      description: {
+        story: '\`activeItemId\` にアイテムの id を渡すことで現在地を明示する（Figmaガイドライン）。'
+      }
+    }
+  },
+  args: {
+    activeItemId: 'review'
   }
-
-  return root;
-};
-
-function createLogoSvg() {
-  const container = document.createElement('div');
-  container.className = 'storybook-global-nav__logo-svg';
-  container.setAttribute('role', 'img');
-  container.setAttribute('aria-label', 'カンリー');
-
-  const topWrapper = document.createElement('div');
-  topWrapper.className = 'storybook-global-nav__logo-svg-top';
-  topWrapper.innerHTML = LOGO_SVG_TOP;
-
-  const bottomWrapper = document.createElement('div');
-  bottomWrapper.className = 'storybook-global-nav__logo-svg-bottom';
-  bottomWrapper.innerHTML = LOGO_SVG_BOTTOM;
-
-  container.appendChild(topWrapper);
-  container.appendChild(bottomWrapper);
-  return container;
-}
-
-function createSection({ label, icon, items = [] }, activeItemId) {
-  const section = document.createElement('div');
-  section.className = 'storybook-global-nav__section';
-
-  // Section head
-  const head = document.createElement('div');
-  head.className = 'storybook-global-nav__section-head';
-
-  const iconEl = document.createElement('span');
-  iconEl.className = 'storybook-global-nav__section-icon';
-  iconEl.innerHTML = SVG_ICONS[icon] ?? '';
-
-  const labelEl = document.createElement('span');
-  labelEl.className = 'storybook-global-nav__section-label';
-  labelEl.textContent = label;
-
-  head.appendChild(iconEl);
-  head.appendChild(labelEl);
-  section.appendChild(head);
-
-  // Section list
-  const list = document.createElement('div');
-  list.className = 'storybook-global-nav__section-list';
-  items.forEach((item) => {
-    list.appendChild(createNavItem({ ...item, active: item.id === activeItemId }));
-  });
-  section.appendChild(list);
-
-  return section;
-}
-
-function createNavItem({ label, href, onClick, badge, active }) {
-  const item = document.createElement('a');
-  item.className =
-    'storybook-global-nav__item' +
-    (active ? ' storybook-global-nav__item--active' : '');
-  item.href = href ?? '#';
-  if (active) item.setAttribute('aria-current', 'page');
-
-  if (onClick) {
-    item.addEventListener('click', (e) => {
-      e.preventDefault();
-      onClick(e);
-    });
+}`,...g.parameters?.docs?.source},description:{story:`現在地（アクティブ状態）の表示確認。
+activeItemId に対象アイテムの id を渡すと、背景色とテキスト色で現在地を示す。
+Figmaガイドライン：「現在地がわかるようにする。」`,...g.parameters?.docs?.description}}},_.parameters={..._.parameters,docs:{..._.parameters?.docs,source:{originalSource:`{
+  parameters: {
+    docs: {
+      description: {
+        story: '件数通知が必要なアイテムにのみ badge を付与する。Figmaの基本設計では「クチコミ（99+）」「投稿（7）」に表示。'
+      }
+    }
+  },
+  args: {
+    sections: [{
+      label: '管理・運用',
+      icon: 'store',
+      items: [{
+        id: 'shop',
+        label: '店舗',
+        href: '#'
+      }, {
+        id: 'review',
+        label: 'クチコミ',
+        href: '#',
+        badge: '99+'
+      }, {
+        id: 'post',
+        label: '投稿',
+        href: '#',
+        badge: '7'
+      }]
+    }],
+    options: DEFAULT_OPTIONS
   }
-
-  const labelEl = document.createElement('span');
-  labelEl.className = 'storybook-global-nav__item-label';
-  labelEl.textContent = label;
-  item.appendChild(labelEl);
-
-  if (badge) {
-    const badgeEl = document.createElement('span');
-    badgeEl.className = 'storybook-global-nav__badge';
-    badgeEl.textContent = badge;
-    item.appendChild(badgeEl);
+}`,..._.parameters?.docs?.source},description:{story:`バッジの表示確認。
+件数通知が必要な項目（クチコミ・投稿など）に badge を付与する。`,..._.parameters?.docs?.description}}},v.parameters={...v.parameters,docs:{...v.parameters?.docs,source:{originalSource:`{
+  parameters: {
+    docs: {
+      description: {
+        story: 'logo・options を省略可能。logo 省略時は alt テキストをフォールバック表示する。options 省略時はオプションエリアが非表示になる。'
+      }
+    }
+  },
+  args: {
+    sections: [{
+      label: '管理・運用',
+      icon: 'store',
+      items: [{
+        id: 'shop',
+        label: '店舗',
+        href: '#'
+      }, {
+        id: 'menu',
+        label: 'メニュー',
+        href: '#'
+      }]
+    }],
+    options: []
   }
-
-  return item;
-}
+}`,...v.parameters?.docs?.source},description:{story:`logo・options を省略した最小構成。
+セクションのみで成立させる場合の参考。`,...v.parameters?.docs?.description}}},y=[`Default`,`WithActiveItem`,`WithBadge`,`Minimal`]}))();export{h as Default,v as Minimal,g as WithActiveItem,_ as WithBadge,y as __namedExportsOrder,m as default};
