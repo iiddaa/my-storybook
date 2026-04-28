@@ -1,0 +1,206 @@
+/* ─────────────────────────────────────────────────────────────
+   Spacing ドキュメンテーションコンポーネント
+   Figma "Design-System-2.0--AI-Native-" Spacing ページより
+   node-id: 406:5217
+
+   Semantic Color 対応:
+     Yellow/500     (#FBBC04)  → head 背景
+     Text/Inverse   (#FFFFFF)  → head タイトル
+     Blue/600       (#1E74DB)  → 概念ラベル・説明
+     Text/Main      (#222222)  → 本文・テーブル全般
+     BG/Main        (#FFFFFF)  → 行背景
+     BG/Sub         (#F7F7F8)  → カード背景
+     BG/Notice      (#EFF0F1)  → テーブルヘッダー行背景
+     Magenta        (#FF00CC)  → カラースクエア（Figmaデザインより）
+───────────────────────────────────────────────────────────── */
+
+.storybook-spacing {
+  font-family: 'Hiragino Sans', sans-serif;
+  color: #222222; /* Text/Main */
+  line-height: 1.5;
+  min-width: 800px;
+}
+
+/* ── Head ── */
+.storybook-spacing__head {
+  background: #fbbc04; /* Yellow/500 */
+  padding: 80px 80px 40px;
+  border-radius: 16px 16px 0 0;
+}
+
+.storybook-spacing__head-title {
+  margin: 0;
+  font-size: 56px;
+  font-weight: 600;
+  color: #ffffff; /* Text/Inverse */
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+/* ── Body ── */
+.storybook-spacing__body {
+  background: #ffffff; /* BG/Main */
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+/* ── 概念セクション ── */
+.storybook-spacing__concept {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.storybook-spacing__concept-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.storybook-spacing__concept-label {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 300;
+  color: #1e74db; /* Blue/600 */
+  line-height: 1.5;
+  opacity: 0.9;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.storybook-spacing__concept-desc {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 300;
+  color: #1e74db; /* Blue/600 */
+  line-height: 1.5;
+  opacity: 0.9;
+  white-space: normal;
+}
+
+.storybook-spacing__concept-title {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 300;
+  color: #222222; /* Text/Main */
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+/* ── テーブルカード ── */
+.storybook-spacing__card {
+  background: #f7f7f8; /* BG/Sub */
+  border-radius: 16px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ── テーブルヘッダー行 ── */
+.storybook-spacing__table-header {
+  background: #eff0f1; /* BG/Notice */
+  display: flex;
+  align-items: flex-start;
+  padding: 8px 24px;
+}
+
+.storybook-spacing__table-label {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #151518;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  opacity: 0.9;
+}
+
+/* Variation列：カラースクエアコンテナ幅(60px) + gap(40px) + 左padding(40px) + 余白分 */
+.storybook-spacing__table-label--variation {
+  width: 266px;
+  flex-shrink: 0;
+}
+
+.storybook-spacing__table-label--use {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ── エントリ行 ── */
+.storybook-spacing__row {
+  background: #ffffff; /* BG/Main */
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 16px 40px;
+}
+
+/* ── カラースクエアコンテナ ── */
+.storybook-spacing__square-container {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── カラースクエア本体（サイズはトークン値と同じpx）── */
+.storybook-spacing__square {
+  background: #ff00cc; /* Magenta（Figmaデザインより） */
+  flex-shrink: 0;
+}
+
+/* ── バリエーション情報エリア ── */
+.storybook-spacing__info {
+  display: flex;
+  flex: 1;
+  gap: 48px;
+  align-items: center;
+  min-width: 0;
+}
+
+/* ── コード（トークン名 + px値）── */
+.storybook-spacing__code {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 166px;
+  flex-shrink: 0;
+}
+
+.storybook-spacing__name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222222; /* Text/Main */
+  line-height: 1.5;
+  opacity: 0.9;
+  white-space: nowrap;
+}
+
+.storybook-spacing__size {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 300;
+  color: #222222; /* Text/Main */
+  line-height: 1.5;
+  opacity: 0.9;
+  white-space: nowrap;
+}
+
+/* ── 用途 ── */
+.storybook-spacing__use {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 300;
+  color: #222222; /* Text/Main */
+  line-height: 1.5;
+  opacity: 0.9;
+}

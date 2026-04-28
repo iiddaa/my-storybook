@@ -32,6 +32,47 @@
   opacity: 0.9;
 }
 
+/* ── 概念セクション ── */
+.storybook-typography__concept {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.storybook-typography__concept-label-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.storybook-typography__concept-label {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 300;
+  color: #1e74db; /* Blue/600 */
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.storybook-typography__concept-tagline {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 300;
+  color: #1e74db; /* Blue/600 */
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.storybook-typography__concept-title {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 300;
+  color: #222222; /* Text/Main */
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
 /* ── Body ── */
 .storybook-typography__body {
   background: #ffffff; /* BG/Main */
