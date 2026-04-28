@@ -233,6 +233,32 @@ export const createTypography = ({ className = '' } = {}) => {
   const body = document.createElement('div');
   body.className = 'storybook-typography__body';
 
+  // ── 概念セクション ──
+  const concept = document.createElement('div');
+  concept.className = 'storybook-typography__concept';
+
+  const conceptLabelRow = document.createElement('div');
+  conceptLabelRow.className = 'storybook-typography__concept-label-row';
+
+  const conceptLabel = document.createElement('p');
+  conceptLabel.className = 'storybook-typography__concept-label';
+  conceptLabel.textContent = '概念';
+
+  const conceptTagline = document.createElement('p');
+  conceptTagline.className = 'storybook-typography__concept-tagline';
+  conceptTagline.textContent = 'どういうものか。何のためにあるのか。根源的で、絶対に外しては成り立たない本質。';
+
+  conceptLabelRow.appendChild(conceptLabel);
+  conceptLabelRow.appendChild(conceptTagline);
+  concept.appendChild(conceptLabelRow);
+
+  const conceptTitle = document.createElement('p');
+  conceptTitle.className = 'storybook-typography__concept-title';
+  conceptTitle.textContent = 'フォントシステムを7カテゴリで定義。各カテゴリはPreview / Variation / Useの表形式で構成される。';
+  concept.appendChild(conceptTitle);
+
+  body.appendChild(concept);
+
   TYPOGRAPHY_SECTIONS.forEach((section) => {
     body.appendChild(createSection(section));
   });

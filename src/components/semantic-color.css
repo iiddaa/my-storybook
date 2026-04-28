@@ -45,11 +45,12 @@
   gap: 16px;
 }
 
-/* 概念ラベル行（"概念" + 説明文インライン） */
+/* 概念ラベル行（"概念" + 説明文を縦積み） */
 .storybook-semantic-color__concept-label-row {
   display: flex;
-  align-items: center;
-  gap: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
 }
 
 .storybook-semantic-color__concept-label {
@@ -70,7 +71,6 @@
   line-height: 1.5;
   opacity: 0.9;
   margin: 0;
-  white-space: nowrap;
 }
 
 /* 概念本文（32px、Figma: font/exl） */
