@@ -1,0 +1,136 @@
+/* =====================================================
+   SearchInput
+   ===================================================== */
+
+/* --- Root --- */
+.storybook-search-input {
+  position: relative;
+  width: 100%;
+}
+
+/* --- Field row --- */
+.storybook-search-input__field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 37px;
+  padding: 8px 12px;
+  background-color: #fff;
+  border: 1px solid #d6d9db;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease, border-width 0.15s ease;
+}
+
+/* フォーカス時・入力中：青いボーダー 2px */
+.storybook-search-input__field--focused {
+  border: 2px solid #318bf7;
+}
+
+/* Disabled */
+.storybook-search-input__field--disabled {
+  background-color: #f7f7f8;
+  cursor: not-allowed;
+}
+
+/* ブラウザ操作でのフォーカス */
+.storybook-search-input__field:focus-within:not(.storybook-search-input__field--disabled) {
+  border: 2px solid #318bf7;
+}
+
+/* --- Icon --- */
+.storybook-search-input__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  color: #858c94;
+}
+
+.storybook-search-input__field--disabled .storybook-search-input__icon {
+  color: #adb2b8;
+}
+
+/* --- Input --- */
+.storybook-search-input__input {
+  flex: 1 0 0;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #222;
+  /* 入力文章が長い場合：改行せず末尾表示、横スクロール可 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.storybook-search-input__input::placeholder {
+  color: #858c94;
+}
+
+.storybook-search-input__input:disabled {
+  color: #adb2b8;
+  cursor: not-allowed;
+}
+
+.storybook-search-input__input:disabled::placeholder {
+  color: #adb2b8;
+}
+
+/* --- Dropdown（共通） --- */
+.storybook-search-input__dropdown {
+  position: absolute;
+  top: calc(100% + 2px);
+  left: -1px;
+  right: -1px;
+  background-color: #fff;
+  border: 1px solid #d6d9db;
+  border-radius: 4px;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+/* フォーカス時ドロップダウン：ボーダー分オフセット調整 */
+.storybook-search-input__field--focused ~ .storybook-search-input__dropdown {
+  left: -2px;
+  right: -2px;
+}
+
+/* --- Dropdown item --- */
+.storybook-search-input__dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+}
+
+.storybook-search-input__dropdown-item:hover,
+.storybook-search-input__dropdown-item:focus-visible {
+  background-color: #f7f7f8;
+  outline: none;
+}
+
+.storybook-search-input__dropdown-query {
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #222;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.storybook-search-input__dropdown-suffix {
+  flex-shrink: 0;
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #858c94;
+}

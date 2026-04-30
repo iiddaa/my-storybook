@@ -1,0 +1,90 @@
+/* =====================================================
+   Dropzone
+   ===================================================== */
+
+/* --- Root --- */
+.storybook-dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-width: 512px;
+  padding: 32px 12px;
+  border: 1px dashed #d6d9db;
+  border-radius: 4px;
+  background-color: #f7f7f8;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+/* ドラッグ時：背景・ボーダーがアクセントカラーに変化 */
+.storybook-dropzone--drag-over {
+  background-color: #eaf3fe;
+  border-color: #318bf7;
+}
+
+/* --- Text area --- */
+.storybook-dropzone__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.storybook-dropzone__title {
+  margin: 0;
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #222;
+  white-space: nowrap;
+}
+
+.storybook-dropzone__separator {
+  margin: 0;
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #515a65;
+}
+
+/* --- Actions --- */
+.storybook-dropzone__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* --- Button（セカンダリスタイル） --- */
+.storybook-dropzone__btn {
+  padding: 4px 12px;
+  background-color: #fff;
+  border: 1px solid #318bf7;
+  border-radius: 4px;
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #318bf7;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.storybook-dropzone__btn:hover {
+  background-color: #eaf3fe;
+}
+
+/* --- Hint --- */
+.storybook-dropzone__hint {
+  margin: 0;
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #515a65;
+  text-align: center;
+}
