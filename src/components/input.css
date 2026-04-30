@@ -1,0 +1,86 @@
+/* =====================================================
+   Input
+   ===================================================== */
+
+/* --- Wrapper --- */
+.storybook-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+/* --- Input --- */
+.storybook-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 12px;
+  background-color: #fff;
+  border: 1px solid #d6d9db;
+  border-radius: 4px;
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #222;
+  outline: none;
+  transition: border-color 0.15s ease, border-width 0.15s ease, background-color 0.15s ease;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.storybook-input::placeholder {
+  color: #858c94;
+}
+
+/* フォーカス時（ブラウザ操作）: 入力中と同じスタイル */
+.storybook-input:focus-visible:not(.storybook-input--disabled):not(.storybook-input--error) {
+  border: 2px solid #318bf7;
+}
+
+/* --- Active（入力中） --- */
+.storybook-input--active {
+  border: 2px solid #318bf7;
+}
+
+/* --- Filled（入力済み） --- */
+/* デフォルトと同じ見た目 */
+
+/* --- Disabled --- */
+.storybook-input--disabled {
+  background-color: #f7f7f8;
+  color: #adb2b8;
+  cursor: not-allowed;
+}
+
+.storybook-input--disabled::placeholder {
+  color: #adb2b8;
+}
+
+/* --- Error --- */
+.storybook-input--error {
+  background-color: #fdf2f0;
+  border: 2px solid #eb4d38;
+  color: #222;
+}
+
+/* --- Error message row --- */
+.storybook-input-error {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.storybook-input-error__icon {
+  flex-shrink: 0;
+  color: #eb4d38;
+}
+
+.storybook-input-error__message {
+  margin: 0;
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #eb4d38;
+}
