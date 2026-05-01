@@ -1,0 +1,174 @@
+/* =====================================================
+   Select
+   ===================================================== */
+
+/* --- Root --- */
+.storybook-select {
+  position: relative;
+  min-width: 160px;
+  width: 100%;
+}
+
+/* --- Field --- */
+.storybook-select__field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background-color: #fff;
+  border: 1px solid #d6d9db;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+  min-height: 37px;
+  transition: border-color 0.15s ease, border-width 0.15s ease;
+}
+
+/* 選択中（open）：青いボーダー 2px */
+.storybook-select__field--open {
+  border: 2px solid #318bf7;
+}
+
+/* Disabled */
+.storybook-select__field--disabled {
+  background-color: #f7f7f8;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* 複数選択時は左寄せ wrap */
+.storybook-select__field--multiple {
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+
+/* --- プレースホルダー --- */
+.storybook-select__placeholder {
+  flex: 1 0 0;
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #858c94;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.storybook-select__field--disabled .storybook-select__placeholder {
+  color: #adb2b8;
+}
+
+/* --- 選択済みテキスト（単数） --- */
+.storybook-select__value {
+  flex: 1 0 0;
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #222;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* --- チップ群（複数選択） --- */
+.storybook-select__chips {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1 0 0;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+/* --- チップ本体 --- */
+.storybook-select__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  background-color: #eff0f1;
+  border-radius: 99px;
+  flex-shrink: 0;
+}
+
+.storybook-select__chip-text {
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #222;
+  white-space: nowrap;
+}
+
+.storybook-select__chip-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  background: none;
+  border: none;
+  color: #222;
+  cursor: pointer;
+  flex-shrink: 0;
+  border-radius: 2px;
+}
+
+.storybook-select__chip-close:hover {
+  color: #eb4d38;
+}
+
+/* --- Caret --- */
+.storybook-select__caret {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  color: #222;
+  margin-left: auto;
+}
+
+.storybook-select__field--disabled .storybook-select__caret {
+  color: #adb2b8;
+}
+
+/* --- Dropdown --- */
+.storybook-select__dropdown {
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  box-sizing: border-box;
+  padding: 4px 0;
+}
+
+/* --- 選択肢アイテム --- */
+.storybook-select__option {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #222;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+}
+
+.storybook-select__option:hover,
+.storybook-select__option:focus-visible {
+  background-color: #f7f7f8;
+  outline: none;
+}

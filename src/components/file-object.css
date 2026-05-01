@@ -9,7 +9,7 @@
   justify-content: space-between;
   gap: 8px;
   min-width: 240px;
-  padding: 12px;
+  padding: 16px 12px;
   background-color: #fff;
   border: 1px solid #d6d9db;
   border-radius: 8px;
@@ -36,7 +36,7 @@
   margin: 0;
   font-family: 'Hiragino Sans', sans-serif;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
   color: #222;
   white-space: nowrap;
@@ -59,8 +59,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
   padding: 0;
   background: none;
   border: none;

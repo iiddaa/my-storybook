@@ -1,0 +1,196 @@
+/* ─────────────────────────────────────────────────────────────
+   Shadow ドキュメンテーションコンポーネント
+   Figma "Design-System-2.0--AI-Native-" Shadow ページより
+   node-id: 502:11987
+
+   カラー対応:
+     Blue (#318BF7)   → head 背景
+     White (#FFFFFF)  → head タイトル
+     Blue (#1E74DB)   → 概念ラベル・説明
+     #222222          → 本文・テーブル全般
+     #D6D9DB          → カード外枠背景
+     #F7F7F8          → 行背景
+     #EFF0F1          → テーブルヘッダー行背景
+     #FFFFFF          → プレビュースクエア
+───────────────────────────────────────────────────────────── */
+
+.storybook-shadow {
+  font-family: 'Hiragino Sans', sans-serif;
+  color: #222222;
+  line-height: 1.5;
+  min-width: 800px;
+}
+
+/* ── Head ── */
+.storybook-shadow__head {
+  background: #318bf7;
+  padding: 80px 80px 40px;
+  border-radius: 16px 16px 0 0;
+}
+
+.storybook-shadow__head-title {
+  margin: 0;
+  font-size: 56px;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+/* ── Body ── */
+.storybook-shadow__body {
+  background: #ffffff;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+/* ── 概念セクション ── */
+.storybook-shadow__concept {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.storybook-shadow__concept-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.storybook-shadow__concept-label {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 300;
+  color: #1e74db;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.storybook-shadow__concept-desc {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 300;
+  color: #1e74db;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.storybook-shadow__concept-title {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 300;
+  color: #222222;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+/* ── テーブルカード ── */
+.storybook-shadow__card {
+  background: #d6d9db;
+  border-radius: 16px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ── テーブルヘッダー行 ── */
+.storybook-shadow__table-header {
+  background: #eff0f1;
+  display: flex;
+  align-items: flex-start;
+  padding: 8px 24px;
+}
+
+.storybook-shadow__table-label {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #151518;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  opacity: 0.9;
+}
+
+/* スクエアコンテナ(60px) + gap(40px) + コード幅(166px) + gap(28px) + 左余白 */
+.storybook-shadow__table-label--variation {
+  width: 334px;
+  flex-shrink: 0;
+}
+
+.storybook-shadow__table-label--use {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ── エントリ行 ── */
+.storybook-shadow__row {
+  background: #f7f7f8;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 16px 40px;
+}
+
+/* ── プレビュースクエアコンテナ ── */
+.storybook-shadow__square-wrap {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── プレビュースクエア本体（shadow は JS で inline style で設定）── */
+.storybook-shadow__square {
+  width: 60px;
+  height: 60px;
+  background: #ffffff;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+/* ── コード（トークン名 + パラメータ）── */
+.storybook-shadow__code {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 166px;
+  flex-shrink: 0;
+}
+
+.storybook-shadow__name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222222;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.storybook-shadow__params {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 300;
+  color: #222222;
+  line-height: 1.5;
+  opacity: 0.9;
+  white-space: pre-line;
+}
+
+/* ── 用途 ── */
+.storybook-shadow__use {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 300;
+  color: #222222;
+  line-height: 1.5;
+  opacity: 0.9;
+}
