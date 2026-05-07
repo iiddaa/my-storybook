@@ -1,0 +1,57 @@
+/* =====================================================
+   FormLabel
+   ===================================================== */
+
+.storybook-form-label {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+}
+
+/* --- ヘッダー行（ラベルテキスト + 必須バッジ） --- */
+.storybook-form-label__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* --- ラベルテキスト --- */
+.storybook-form-label__text {
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #222;
+  white-space: nowrap;
+}
+
+/* --- 必須バッジ --- */
+.storybook-form-label__required {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 14px;
+  padding: 2px 8px;
+  background-color: #fff;
+  border: 1px solid #f78f43;
+  border-radius: 99px;
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 1.5;
+  color: #f78f43;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+/* --- 説明文 --- */
+.storybook-form-label__description {
+  margin: 0;
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #515a65;
+}
