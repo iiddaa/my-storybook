@@ -1,0 +1,94 @@
+/* =====================================================
+   Chip
+   ===================================================== */
+
+.storybook-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  padding: 2px 8px;
+  border-radius: 99px;
+  gap: 4px;
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.5;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+/* --- バリアント（アウトライン） --- */
+.storybook-chip--red {
+  background: #fff;
+  border: 1px solid #eb4d38;
+  color: #eb4d38;
+}
+
+.storybook-chip--green {
+  background: #fff;
+  border: 1px solid #22ad7f;
+  color: #22ad7f;
+}
+
+.storybook-chip--orange {
+  background: #fff;
+  border: 1px solid #f78f43;
+  color: #f78f43;
+}
+
+.storybook-chip--gray {
+  background: #fff;
+  border: 1px solid #858c94;
+  color: #858c94;
+}
+
+.storybook-chip--blue {
+  background: #fff;
+  border: 1px solid #318bf7;
+  color: #318bf7;
+}
+
+/* --- バリアント（ベタ塗り） --- */
+.storybook-chip--blue-filled {
+  background: #eaf3fe;
+  border: none;
+  color: #222;
+}
+
+.storybook-chip--gray-filled {
+  background: #eff0f1;
+  border: none;
+  color: #222;
+}
+
+/* --- ラベル --- */
+.storybook-chip__label {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+/* --- 閉じるボタン --- */
+.storybook-chip__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  flex-shrink: 0;
+  line-height: 0;
+}
+
+.storybook-chip__close:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 1px;
+  border-radius: 2px;
+}

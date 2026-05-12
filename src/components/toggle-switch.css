@@ -1,0 +1,97 @@
+/* =====================================================
+   ToggleSwitch
+   ===================================================== */
+
+.storybook-toggle-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.storybook-toggle-switch--disabled {
+  cursor: not-allowed;
+}
+
+/* --- ネイティブ input を非表示（アクセシビリティ・キーボード操作用） --- */
+.storybook-toggle-switch__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  pointer-events: none;
+}
+
+/* --- トグルトラック --- */
+.storybook-toggle-switch__track {
+  display: flex;
+  align-items: center;
+  width: 28px;
+  height: 16px;      /* 1px border × 2 + 2px padding × 2 + 10px knob */
+  padding: 2px;
+  border: 1px solid #d6d9db;
+  border-radius: 10px;
+  background: #fff;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+/* ON（enabled） */
+.storybook-toggle-switch--on .storybook-toggle-switch__track {
+  background: #318bf7;
+}
+
+/* ON（disabled） */
+.storybook-toggle-switch--disabled.storybook-toggle-switch--on .storybook-toggle-switch__track {
+  background: #98c5fb;
+}
+
+/* focus-visible */
+.storybook-toggle-switch__input:focus-visible + .storybook-toggle-switch__track {
+  outline: 2px solid #318bf7;
+  outline-offset: 2px;
+  border-radius: 10px;
+}
+
+/* --- ノブ --- */
+.storybook-toggle-switch__knob {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #adb2b8;   /* OFF enabled: 中間グレー */
+  flex-shrink: 0;
+  transition: transform 0.1s ease;
+}
+
+/* ON 時: ノブを右へ移動（トラック内幅 22px - ノブ 10px = 12px） */
+.storybook-toggle-switch--on .storybook-toggle-switch__knob {
+  background: #fff;
+  transform: translateX(12px);
+}
+
+/* OFF disabled: ノブをより薄いグレーに */
+.storybook-toggle-switch--disabled:not(.storybook-toggle-switch--on) .storybook-toggle-switch__knob {
+  background: #d6d9db;
+}
+
+/* ON disabled: ノブは白のまま */
+.storybook-toggle-switch--disabled.storybook-toggle-switch--on .storybook-toggle-switch__knob {
+  background: #fff;
+  transform: translateX(12px);
+}
+
+/* --- ラベル --- */
+.storybook-toggle-switch__label {
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #222;
+  white-space: nowrap;
+}
+
+/* disabled ラベル（Figma: opacity 0.5） */
+.storybook-toggle-switch--disabled .storybook-toggle-switch__label {
+  opacity: 0.5;
+}

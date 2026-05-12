@@ -1,0 +1,110 @@
+/* =====================================================
+   Checkbox
+   ===================================================== */
+
+.storybook-checkbox {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 8px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
+  font: inherit;
+}
+
+.storybook-checkbox--disabled {
+  cursor: default;
+}
+
+/* --- チェックボックス本体コンテナ --- */
+.storybook-checkbox__box-container {
+  display: flex;
+  align-items: center;
+  height: 21px; /* ラベルの line-height(14px × 1.5 = 21px) に合わせて垂直中央揃え */
+  flex-shrink: 0;
+}
+
+/* --- チェックボックス本体 --- */
+.storybook-checkbox__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1px solid #d6d9db;
+  background: #fff;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+/* hover（unchecked のみ） */
+.storybook-checkbox:not(.storybook-checkbox--disabled):hover
+  .storybook-checkbox__box:not(.storybook-checkbox__box--checked):not(.storybook-checkbox__box--indeterminate) {
+  border-color: #318bf7;
+}
+
+/* checked / indeterminate（enabled） */
+.storybook-checkbox__box--checked,
+.storybook-checkbox__box--indeterminate {
+  background: #318bf7;
+  border-color: #318bf7;
+}
+
+/* unchecked（disabled） */
+.storybook-checkbox--disabled .storybook-checkbox__box:not(.storybook-checkbox__box--checked):not(.storybook-checkbox__box--indeterminate) {
+  background: #d6d9db;
+  border-color: #d6d9db;
+}
+
+/* checked（disabled） */
+.storybook-checkbox--disabled .storybook-checkbox__box--checked,
+.storybook-checkbox--disabled .storybook-checkbox__box--indeterminate {
+  background: #98c5fb;
+  border-color: #d6d9db;
+}
+
+/* --- indeterminate のダッシュ --- */
+.storybook-checkbox__indeterminate-bar {
+  display: block;
+  width: 10px;
+  height: 1.5px;
+  background: #fff;
+  border-radius: 1px;
+}
+
+/* --- テキストコンテナ --- */
+.storybook-checkbox__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+/* --- ラベル --- */
+.storybook-checkbox__label {
+  display: block;
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #222;
+  white-space: nowrap;
+}
+
+.storybook-checkbox--disabled .storybook-checkbox__label {
+  color: #adb2b8;
+}
+
+/* --- 説明文 --- */
+.storybook-checkbox__description {
+  display: block;
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #5c6670;
+  white-space: nowrap;
+}

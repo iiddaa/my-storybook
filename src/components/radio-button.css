@@ -13,7 +13,6 @@
 
 .storybook-radio-item--disabled {
   cursor: not-allowed;
-  opacity: 0.5;
 }
 
 /* --- ネイティブ input を非表示にしてカスタム表示に置き換える --- */
@@ -56,6 +55,18 @@
   background-color: #fff;
 }
 
+/* unchecked disabled: グレー塗りつぶし（Figma: bg #d6d9db） */
+.storybook-radio-item--disabled .storybook-radio-circle:not(.storybook-radio-circle--checked) {
+  background-color: #d6d9db;
+  border-color: #d6d9db;
+}
+
+/* checked disabled: 薄ブルー塗りつぶし（Figma: bg #98c5fb） */
+.storybook-radio-item--disabled .storybook-radio-circle--checked {
+  background-color: #98c5fb;
+  border-color: #d6d9db;
+}
+
 /* hover（PCのみ・Figmaガイドライン） */
 .storybook-radio-item:not(.storybook-radio-item--disabled):hover .storybook-radio-circle:not(.storybook-radio-circle--checked) {
   border-color: #318bf7;
@@ -80,6 +91,11 @@
   font-size: 14px;
   line-height: 1.5;
   color: #222;
+}
+
+/* disabled テキスト色（Figma: #adb2b8） */
+.storybook-radio-item--disabled .storybook-radio-label {
+  color: #adb2b8;
 }
 
 .storybook-radio-hint {

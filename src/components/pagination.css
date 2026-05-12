@@ -1,0 +1,162 @@
+/* =====================================================
+   Pagination
+   ===================================================== */
+
+.storybook-pagination {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* ── 件数テキスト ── */
+.storybook-pagination__count {
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #222;
+  white-space: nowrap;
+}
+
+/* ── 表示件数セレクター ── */
+.storybook-pagination__per-page {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.storybook-pagination__per-page-field {
+  position: relative;
+  width: 90px;
+  color: #222;
+}
+
+.storybook-pagination__per-page-field--disabled {
+  color: #adb2b8;
+}
+
+.storybook-pagination__per-page-select {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  padding: 8px 28px 8px 12px;
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  color: inherit;
+  background-color: #fff;
+  border: 1px solid #d6d9db;
+  border-radius: 4px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.storybook-pagination__per-page-select:disabled {
+  cursor: default;
+}
+
+.storybook-pagination__per-page-caret {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  color: inherit;
+}
+
+.storybook-pagination__per-page-label {
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #222;
+  white-space: nowrap;
+}
+
+/* ── ページナビゲーション ── */
+.storybook-pagination__pages {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ── 前/次ボタン共通 ── */
+.storybook-pagination__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 4px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.storybook-pagination__btn--prev {
+  background-color: #f7f7f8;
+  color: #222;
+}
+
+.storybook-pagination__btn--next {
+  background-color: #eaf3fe;  /* blue/100 */
+  color: #318bf7;
+}
+
+/* disabled / 移動不可の状態（prev: page=1、next: 最終ページ、またはdisabled） */
+.storybook-pagination__btn--inactive {
+  background-color: #f7f7f8;
+  color: #adb2b8;
+  cursor: default;
+}
+
+.storybook-pagination__btn:not(.storybook-pagination__btn--inactive):hover {
+  opacity: 0.8;
+}
+
+/* ── ページカウント ── */
+.storybook-pagination__page-count {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.storybook-pagination__page-input {
+  width: 60px;
+  padding: 8px 12px;
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #222;
+  background-color: #fff;
+  border: 1px solid #d6d9db;
+  border-radius: 4px;
+  text-align: center;
+  box-sizing: border-box;
+  -moz-appearance: textfield;
+}
+
+.storybook-pagination__page-input::-webkit-inner-spin-button,
+.storybook-pagination__page-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.storybook-pagination__page-input--disabled {
+  color: #adb2b8;
+}
+
+.storybook-pagination__page-total {
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #222;
+  white-space: nowrap;
+}

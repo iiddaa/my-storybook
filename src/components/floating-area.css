@@ -1,0 +1,82 @@
+/* =====================================================
+   FloatingArea
+   ===================================================== */
+
+.storybook-floating-area {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 24px;
+  padding: 12px 24px;
+  background-color: #fff;
+  border-top: 1px solid #d6d9db;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ブラウザ下部固定（実運用時） */
+.storybook-floating-area--fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+/* ── ボタングループ ── */
+.storybook-floating-area__btn-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* ── ボタン共通 ── */
+.storybook-floating-area__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.5;
+  cursor: pointer;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+/* ── プライマリボタン ── */
+.storybook-floating-area__btn--primary {
+  background-color: #318bf7;
+  color: #fff;
+  border: none;
+}
+
+.storybook-floating-area__btn--primary.storybook-floating-area__btn--disabled {
+  background-color: #98c5fb;
+  cursor: default;
+}
+
+/* ── セカンダリボタン ── */
+.storybook-floating-area__btn--secondary {
+  background-color: #fff;
+  color: #318bf7;
+  border: 1px solid #318bf7;
+}
+
+.storybook-floating-area__btn--secondary.storybook-floating-area__btn--disabled {
+  color: #98c5fb;
+  border-color: #98c5fb;
+  cursor: default;
+}
+
+/* ── ホバー（有効状態のみ） ── */
+.storybook-floating-area__btn--primary:not(.storybook-floating-area__btn--disabled):hover {
+  opacity: 0.85;
+}
+
+.storybook-floating-area__btn--secondary:not(.storybook-floating-area__btn--disabled):hover {
+  background-color: #eaf3fe;
+}
