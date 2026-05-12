@@ -3,56 +3,50 @@ import { createRadioButton, createRadioGroup } from '../src/components/RadioButt
 
 // ─────────────────────────────────────────────────────────────
 // Docs 用コンポーネント説明
-// Figmaデザインシステム "Design-System-2.0" Radio button ページより
+// Figmaデザインシステム "Design-System-2.0--AI-Native-" Radio button ページより
+// node-id: 233:5841
 // ─────────────────────────────────────────────────────────────
 const COMPONENT_DESCRIPTION = `
 ## 概念
 
-選択肢から**一つを選べる**コンポーネント。
-選択肢を格納せずに全て表示するため、選択肢を一覧できる。
+どういうものか。何のためにあるのか。根源的で、絶対に外しては成り立たない本質。
+
+> **選択肢から一つを選べるもの。選択肢を格納せずに全て表示するため、選択肢を一覧できる。**
 
 ---
 
-## 基本構造
+## 基本設計
 
-| 要素 | 内容 |
-|------|------|
-| ラジオ丸 | 16×16px の円。未選択：白背景・グレーボーダー / 選択済み：青背景・白ドット |
-| ラベル | 何に対しての操作かを明示するテキスト |
-| ヒントテキスト | ラベル下に表示する補足テキスト（任意） |
+ラジオ丸（16×16px / border-radius: 10px の円形）＋ラベルテキスト（任意でヒントテキスト）の構成。
 
----
-
-## 状態
-
-| 状態 | 説明 |
-|------|------|
-| default（通常） | 未選択の初期状態 |
-| hover（ホバー） | PCのみ。ラジオ丸のボーダーが青くなる |
-| focused（フォーカス） | キーボード操作時にアウトラインを表示 |
-| disabled（無効） | 操作不可。opacity 50% で表示 |
+| 状態 | 見た目 |
+|------|--------|
+| unchecked（enabled） | 白背景・グレーボーダー（\`#d6d9db\`） |
+| hover（enabled） | 白背景・ブルーボーダー（\`#318bf7\`） |
+| checked（enabled） | ブルー背景（\`#318bf7\`）・中央に白ドット（6×6px） |
+| unchecked（disabled） | グレー背景（\`#d6d9db\`）・グレーボーダー |
+| checked（disabled） | 薄ブルー背景（\`#98c5fb\`）・グレーボーダー・白ドット |
 
 ---
 
-## 使用上の注意
+## 使用時に気をつけておくこと
 
-> 参考程度に。厳格なルールというわけではない。
-
-- 「CheckboxとRadioButtonとToggleSwitchの使い分け」を参照して適切に使い分ける
-- **何に対しての操作なのか明示するためにラベルを設ける**
-- **ラベルも含めてクリック / タップ領域を確保する**
-- 操作をしたら即座に反応を返す、過剰なアニメーションはつけない
+- Checkbox・RadioButton・ToggleSwitchの使い分けを意識して、適切に使い分ける。
+- 選択状態がひと目で分かるよう、視認性を重視する。
+- 何に対しての操作なのか明示するためにラベルを設ける。
+- ラベルも含めてクリック/タップ領域を確保する。
+- 操作をしたら即座に反応を返す。過剰なアニメーションはつけない。
 `;
 
 // ─────────────────────────────────────────────────────────────
 // Meta
 // ─────────────────────────────────────────────────────────────
 export default {
-  title: 'Components/RadioButton',
+  title: 'RadioButton',
   tags: ['autodocs'],
   render: (args) => createRadioButton(args),
   parameters: {
-    layout: 'centered',
+    layout: 'padded',
     docs: {
       description: {
         component: COMPONENT_DESCRIPTION,
@@ -63,6 +57,7 @@ export default {
     label: {
       control: 'text',
       description: '選択肢のラベルテキスト',
+      table: { defaultValue: { summary: 'アイテム 1' } },
     },
     value: {
       control: 'text',
@@ -75,16 +70,17 @@ export default {
     checked: {
       control: 'boolean',
       description: '選択済み状態',
-      table: { defaultValue: { summary: false } },
+      table: { defaultValue: { summary: 'false' } },
     },
     disabled: {
       control: 'boolean',
       description: '無効状態',
-      table: { defaultValue: { summary: false } },
+      table: { defaultValue: { summary: 'false' } },
     },
     hint: {
       control: 'text',
-      description: 'ラベル下に表示するヒントテキスト（任意）',
+      description: 'ラベル下に表示するヒントテキスト（空文字の場合は非表示）',
+      table: { defaultValue: { summary: '' } },
     },
     onChange: { action: 'changed' },
   },
@@ -100,93 +96,125 @@ export default {
 };
 
 // ─────────────────────────────────────────────────────────────
-// Default（未選択）
+// Default（unchecked・enabled）
 // ─────────────────────────────────────────────────────────────
-/** 通常の未選択状態。 */
+/** 未選択・有効状態。デフォルト。グレーボーダーの空のラジオ丸。 */
 export const Default = {};
 
 // ─────────────────────────────────────────────────────────────
-// Checked（選択済み）
+// Checked（選択済み・enabled）
 // ─────────────────────────────────────────────────────────────
-/** 選択済み状態。ラジオ丸が青背景＋白ドットになる。 */
+/** 選択済み。ブルー背景（\`#318bf7\`）＋中央に白ドット（6×6px）が表示される。 */
 export const Checked = {
-  args: { checked: true },
+  parameters: {
+    docs: {
+      description: {
+        story: '選択済み状態（enabled）。ブルー背景・白ドット（Figma: 状態=選択済み, disabled=False）。',
+      },
+    },
+  },
+  args: {
+    checked: true,
+  },
 };
 
 // ─────────────────────────────────────────────────────────────
 // WithHint（ヒントテキストあり）
 // ─────────────────────────────────────────────────────────────
-/** ラベル下にヒントテキストを表示する。 */
+/** ラベル下にヒントテキスト（12px / \`#5c6670\`）を表示する。 */
 export const WithHint = {
+  parameters: {
+    docs: {
+      description: {
+        story: 'ヒントテキスト付き。ラベル下に 12px・`#5c6670` で補足テキストを表示（Figma: propValue4=true）。',
+      },
+    },
+  },
   args: {
     hint: 'ヒントテキスト',
   },
 };
 
 // ─────────────────────────────────────────────────────────────
-// Disabled（無効）
+// DisabledUnchecked（無効・未選択）
 // ─────────────────────────────────────────────────────────────
-/** 無効状態。opacity 50% で操作不可になる。 */
-export const Disabled = {
-  args: { disabled: true },
+/** 無効・未選択状態。グレー背景（\`#d6d9db\`）でインタラクション不可。テキストも薄くなる（\`#adb2b8\`）。 */
+export const DisabledUnchecked = {
+  parameters: {
+    docs: {
+      description: {
+        story:
+          '無効・未選択。グレー背景（`#d6d9db`）・テキスト `#adb2b8`（Figma: 状態=未選択, disabled=True）。',
+      },
+    },
+  },
+  args: {
+    disabled: true,
+  },
 };
 
-/** 無効かつ選択済み。 */
+// ─────────────────────────────────────────────────────────────
+// DisabledChecked（無効・選択済み）
+// ─────────────────────────────────────────────────────────────
+/** 無効・選択済み状態。薄ブルー背景（\`#98c5fb\`）でインタラクション不可。 */
 export const DisabledChecked = {
-  args: { checked: true, disabled: true },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          '無効・選択済み。薄ブルー背景（`#98c5fb`）・グレーボーダー・白ドット（Figma: 状態=選択済み, disabled=True）。',
+      },
+    },
+  },
+  args: {
+    checked: true,
+    disabled: true,
+  },
 };
 
 // ─────────────────────────────────────────────────────────────
 // AllStates（全状態一覧）
 // ─────────────────────────────────────────────────────────────
-/**
- * Figmaの基本設計に沿った全状態の一覧。
- * 左列：未選択 / 右列：選択済み（enabled・disabled）
- */
+/** 全状態の比較表示。Figma「基本設計」のカラーパターン一覧に対応。 */
 export const AllStates = {
   parameters: {
     docs: {
       description: {
-        story: '全4状態（default / hover / focused / disabled）の比較一覧。',
+        story:
+          '全状態の比較表示（Figma「基本設計」）。左列: enabled、右列: disabled。行: unchecked / checked。',
       },
     },
   },
   render: () => {
-    const container = document.createElement('div');
-    container.style.cssText = 'display:flex;flex-direction:column;gap:24px;padding:24px;';
-
-    const rows = [
-      { label: 'default（通常）',   checked: false, disabled: false },
-      { label: 'selected（選択済み）', checked: true,  disabled: false },
-      { label: 'disabled 未選択',    checked: false, disabled: true  },
-      { label: 'disabled 選択済み',  checked: true,  disabled: true  },
+    const states = [
+      { label: 'unchecked', checked: false },
+      { label: 'checked',   checked: true  },
     ];
 
-    rows.forEach(({ label, checked, disabled }) => {
+    const wrapper = document.createElement('div');
+    wrapper.style.cssText = 'display: flex; flex-direction: column; gap: 12px;';
+
+    states.forEach(({ label, checked }) => {
       const row = document.createElement('div');
-      row.style.cssText = 'display:flex;align-items:center;gap:32px;';
+      row.style.cssText = 'display: flex; align-items: center; gap: 32px;';
 
-      const caption = document.createElement('span');
-      caption.style.cssText =
-        'font-family:sans-serif;font-size:12px;color:#888;width:140px;flex-shrink:0;';
-      caption.innerText = label;
+      const stateLabel = document.createElement('span');
+      stateLabel.style.cssText =
+        'font-family: monospace; font-size: 12px; color: #858c94; width: 90px; text-align: right; flex-shrink: 0;';
+      stateLabel.textContent = label;
+      row.appendChild(stateLabel);
 
-      const item = createRadioButton({
-        label: 'アイテム 1',
-        value: label,
-        name: 'allstates',
-        checked,
-        disabled,
-        hint: checked ? 'ヒントテキスト' : '',
-        onChange: fn(),
-      });
+      row.appendChild(
+        createRadioButton({ label: 'アイテム 1', value: label, name: 'all', checked, disabled: false, onChange: fn() })
+      );
+      row.appendChild(
+        createRadioButton({ label: 'アイテム 1', value: label + '-d', name: 'all', checked, disabled: true, onChange: fn() })
+      );
 
-      row.appendChild(caption);
-      row.appendChild(item);
-      container.appendChild(row);
+      wrapper.appendChild(row);
     });
 
-    return container;
+    return wrapper;
   },
 };
 
@@ -195,7 +223,7 @@ export const AllStates = {
 // ─────────────────────────────────────────────────────────────
 /**
  * `createRadioGroup` を使ったグループ例。
- * 選択肢を縦に並べ、1つが選択済みの状態。
+ * 同一の `name` を持つ選択肢を縦に並べ、排他選択が機能する状態。
  */
 export const Group = {
   parameters: {

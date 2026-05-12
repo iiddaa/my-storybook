@@ -1,0 +1,79 @@
+/* =====================================================
+   SnackBar
+   ===================================================== */
+
+.storybook-snack-bar {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  width: 720px;
+  min-width: 360px;
+  padding: 12px 16px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+}
+
+/* ── タイプ別背景色 ── */
+.storybook-snack-bar--progress { background-color: #eaf3fe; }
+.storybook-snack-bar--success  { background-color: #e4f5ef; }
+.storybook-snack-bar--error    { background-color: #fdf2f0; }
+.storybook-snack-bar--alert    { background-color: #fef4ed; }
+
+/* ── アイコン ── */
+.storybook-snack-bar__icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: 1px; /* テキストベースラインとの微調整 */
+}
+
+/* ── テキストエリア ── */
+.storybook-snack-bar__body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.storybook-snack-bar__message {
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #222222;
+}
+
+/* ── リンクテキスト ── */
+.storybook-snack-bar__link {
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #318bf7;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  align-self: flex-start;
+}
+
+/* ── 閉じるボタン ── */
+.storybook-snack-bar__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  margin-top: 1px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.storybook-snack-bar__close:hover svg path {
+  stroke: #555c63;
+}

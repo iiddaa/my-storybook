@@ -1,0 +1,13 @@
+/* =====================================================
+   TextLink
+   ===================================================== */
+
+.storybook-text-link {
+  font-family: 'Hiragino Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #318bf7;          /* --text/link */
+  text-decoration: underline;
+  text-decoration-style: solid;
+}
