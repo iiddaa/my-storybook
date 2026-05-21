@@ -1,4 +1,4 @@
-import{n as e}from"./chunk-DnJy8xQt.js";import{n as t,t as n}from"./Breadcrumbs-BY6BsC7F.js";var r,i,a,o,s,c,l,u;e((()=>{t(),{fn:r}=__STORYBOOK_MODULE_TEST__,i=`
+import{n as e}from"./chunk-DnJy8xQt.js";import{n as t,t as n}from"./Breadcrumbs-B4hKr2A_.js";var r,i,a,o,s,c,l,u;e((()=>{t(),{fn:r}=__STORYBOOK_MODULE_TEST__,i=`
 ## 概念
 
 どういうものか。何のためにあるのか。根源的で、絶対に外しては成り立たない本質。
