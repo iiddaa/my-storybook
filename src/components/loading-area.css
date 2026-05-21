@@ -1,0 +1,40 @@
+/* ==============================
+   LoadingArea
+   ============================== */
+
+@keyframes storybook-loading-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.storybook-loading-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* ── スピナー（共通）── */
+.storybook-loading-area__spinner {
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #eff0f1;
+  border-top-color: #318bf7;
+  animation: storybook-loading-spin 0.8s linear infinite;
+  flex-shrink: 0;
+}
+
+/* ── M サイズ: 48px、stroke 5px ── */
+.storybook-loading-area__spinner--M {
+  width: 48px;
+  height: 48px;
+  border-width: 5px;
+}
+
+/* ── S サイズ: 24px、stroke 2.5px ── */
+.storybook-loading-area__spinner--S {
+  width: 24px;
+  height: 24px;
+  border-width: 2.5px;
+}

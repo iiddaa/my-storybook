@@ -1,0 +1,111 @@
+/* ==============================
+   Tab
+   ============================== */
+
+.storybook-tab {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+/* ── Primary（アンダーライン型）── */
+
+.storybook-tab--primary {
+  border-bottom: 1px solid #eff0f1;
+}
+
+.storybook-tab--primary .storybook-tab__item {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 12px;
+  font-family: 'Hiragino Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #adb2b8;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #eff0f1;
+  margin-bottom: -1px;
+  border-radius: 0;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  transition: background 0.1s ease, color 0.1s ease;
+}
+
+.storybook-tab--primary .storybook-tab__item:hover:not(.storybook-tab__item--selected):not(.storybook-tab__item--disabled) {
+  background: #f7f7f8;
+  border-radius: 4px 4px 0 0;
+}
+
+.storybook-tab--primary .storybook-tab__item--selected {
+  color: #318bf7;
+  border-bottom-color: #318bf7;
+}
+
+.storybook-tab--primary .storybook-tab__item--disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ── Secondary（背景塗り型）── */
+
+.storybook-tab--secondary {
+  gap: 4px;
+}
+
+.storybook-tab--secondary .storybook-tab__item {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  font-family: 'Hiragino Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #adb2b8;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  transition: background 0.1s ease, color 0.1s ease;
+}
+
+.storybook-tab--secondary .storybook-tab__item:hover:not(.storybook-tab__item--selected):not(.storybook-tab__item--disabled) {
+  background: #f7f7f8;
+}
+
+.storybook-tab--secondary .storybook-tab__item--selected {
+  background: #eaf3fe;
+  color: #222222;
+}
+
+.storybook-tab--secondary .storybook-tab__item--disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ── アイコン ── */
+
+.storybook-tab__item-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.storybook-tab__item-icon svg {
+  width: 16px;
+  height: 16px;
+}

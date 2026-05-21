@@ -1,0 +1,54 @@
+/* ==============================
+   ProgressBar
+   ============================== */
+
+.storybook-progress-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+/* ── テキストエリア ── */
+.storybook-progress-bar__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.storybook-progress-bar__label {
+  font-family: 'Hiragino Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #222222;
+  text-align: center;
+  white-space: pre-wrap;
+}
+
+.storybook-progress-bar__description {
+  font-family: 'Hiragino Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #222222;
+  text-align: center;
+}
+
+/* ── バー本体 ── */
+.storybook-progress-bar__track {
+  width: 100%;
+  height: 8px;
+  background: #eff0f1;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.storybook-progress-bar__fill {
+  height: 100%;
+  background: #318bf7;
+  border-radius: 99px;
+  transition: width 0.3s ease;
+}

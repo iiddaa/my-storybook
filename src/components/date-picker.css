@@ -1,0 +1,134 @@
+/* ==============================
+   DatePicker
+   ============================== */
+
+.storybook-date-picker {
+  display: inline-block;
+}
+
+.storybook-date-picker__calendar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 192px;
+}
+
+/* ── ヘッダー ── */
+.storybook-date-picker__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 192px;
+  height: 21px;
+}
+
+.storybook-date-picker__label {
+  font-family: 'Hiragino Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #222222;
+}
+
+.storybook-date-picker__nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  color: #222222;
+}
+
+.storybook-date-picker__nav-btn:hover {
+  opacity: 0.6;
+}
+
+/* ── 曜日ヘッダー ── */
+.storybook-date-picker__week {
+  display: grid;
+  grid-template-columns: repeat(7, 24px);
+  gap: 4px;
+}
+
+.storybook-date-picker__weekday {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  font-family: 'Hiragino Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #858c94;
+}
+
+/* ── 日付グリッド（type=date）── */
+.storybook-date-picker__dates {
+  display: grid;
+  grid-template-columns: repeat(7, 24px);
+  gap: 4px;
+}
+
+/* ── 月グリッド（type=month）── */
+.storybook-date-picker__months {
+  display: grid;
+  grid-template-columns: repeat(4, 45px);
+  gap: 4px;
+}
+
+/* ── アイテム（日付・月 共通）── */
+.storybook-date-picker__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 99px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: 'Hiragino Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #222222;
+  user-select: none;
+  transition: background 0.1s ease;
+}
+
+.storybook-date-picker__item:hover:not(.storybook-date-picker__item--selected):not(.storybook-date-picker__item--disabled):not(.storybook-date-picker__item--empty) {
+  background: #f5f9ff;
+}
+
+.storybook-date-picker__item--selected {
+  background: #318bf7;
+  color: #ffffff;
+}
+
+.storybook-date-picker__item--disabled {
+  color: #adb2b8;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.storybook-date-picker__item--empty {
+  background: transparent;
+  cursor: default;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+/* ── 月アイテム（type=month、45×24px ピル型）── */
+.storybook-date-picker__item--month-cell {
+  width: 45px;
+  height: 24px;
+  font-size: 12px;
+}

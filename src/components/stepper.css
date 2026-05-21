@@ -1,0 +1,106 @@
+/* ==============================
+   Stepper
+   ============================== */
+
+/* ── ステップ番号サークル（共通）── */
+.storybook-stepper__circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 99px;
+  flex-shrink: 0;
+  font-family: 'Hiragino Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.storybook-stepper__circle--current   { background: #318bf7; }
+.storybook-stepper__circle--complete  { background: #98c5fb; }
+.storybook-stepper__circle--unvisited { background: #d6d9db; }
+
+/* ── ステップラベル（共通）── */
+.storybook-stepper__label {
+  font-family: 'Hiragino Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.storybook-stepper__label--current   { color: #222222; }
+.storybook-stepper__label--complete  { color: #858c94; }
+.storybook-stepper__label--unvisited { color: #858c94; }
+
+/* ── コネクター（共通）── */
+.storybook-stepper__connector--active   { background: #318bf7; }
+.storybook-stepper__connector--inactive { background: #d6d9db; }
+
+/* ═══════════════════════════
+   Horizontal
+═══════════════════════════ */
+
+.storybook-stepper--horizontal {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.storybook-stepper--horizontal .storybook-stepper__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  min-width: 80px;
+}
+
+/* 連結線：サークル中央に揃える（32px ÷ 2 − 1px = 15px） */
+.storybook-stepper--horizontal .storybook-stepper__connector {
+  flex: 1;
+  min-width: 24px;
+  height: 2px;
+  margin-top: 15px;
+}
+
+/* ═══════════════════════════
+   Vertical
+═══════════════════════════ */
+
+.storybook-stepper--vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+.storybook-stepper--vertical .storybook-stepper__item {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 12px;
+}
+
+/* サークル + 縦コネクター列 */
+.storybook-stepper--vertical .storybook-stepper__track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 32px;
+}
+
+.storybook-stepper--vertical .storybook-stepper__connector {
+  width: 2px;
+  flex: 1;
+  min-height: 16px;
+  margin: 4px 0;
+}
+
+.storybook-stepper--vertical .storybook-stepper__label {
+  text-align: left;
+  padding-top: 5px;
+  padding-bottom: 20px;
+}

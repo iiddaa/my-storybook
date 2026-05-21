@@ -31,7 +31,7 @@
 .storybook-dropdown-menu__item:hover,
 .storybook-dropdown-menu__item:focus-visible,
 .storybook-dropdown-menu__item--open {
-  background-color: #f7f7f8;
+  background-color: #eaf3fe;
 }
 
 /* --- アイテム内部（アイコン＋ラベル＋caret） --- */
