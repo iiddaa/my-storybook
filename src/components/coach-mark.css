@@ -1,0 +1,140 @@
+/* ==============================
+   CoachMark
+   ============================== */
+
+/* shadow は filter: drop-shadow で適用し、矢印にも自然に効かせる */
+.storybook-coach-mark {
+  display: inline-flex;
+  align-items: center;
+  filter: drop-shadow(0px 2px 10px rgba(0, 0, 0, 0.15));
+}
+
+/* ── 上配置・下配置（縦並び）── */
+.storybook-coach-mark--top,
+.storybook-coach-mark--bottom {
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── 左配置・右配置（横並び）── */
+.storybook-coach-mark--left,
+.storybook-coach-mark--right {
+  flex-direction: row;
+  align-items: center;
+}
+
+/* ── カード ── */
+.storybook-coach-mark__card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  width: 320px;
+  min-width: 320px;
+  max-width: 480px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* ── 画像エリア ── */
+.storybook-coach-mark__image {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+  background: #f7f7f8;
+  flex-shrink: 0;
+}
+
+/* ── タイトル ── */
+.storybook-coach-mark__title {
+  margin: 0;
+  font-family: 'Hiragino Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000000;
+}
+
+/* ── 説明文 ── */
+.storybook-coach-mark__description {
+  margin: 0;
+  font-family: 'Hiragino Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #000000;
+  white-space: pre-wrap;
+}
+
+.storybook-coach-mark__description a {
+  color: #318bf7;
+  text-decoration: underline;
+}
+
+/* ── ボタンエリア（右寄せ）── */
+.storybook-coach-mark__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* ── ボタン ── */
+.storybook-coach-mark__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 8px 16px;
+  background: #318bf7;
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  font-family: 'Hiragino Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.5;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.1s ease;
+}
+
+.storybook-coach-mark__button:hover {
+  background: #1a7cee;
+}
+
+/* ── 吹き出し矢印（CSS三角形）── */
+.storybook-coach-mark__tail {
+  flex-shrink: 0;
+  width: 0;
+  height: 0;
+}
+
+/* 上配置: カードの下に ▼ 矢印（下向き） */
+.storybook-coach-mark--top .storybook-coach-mark__tail {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 16px solid #ffffff;
+}
+
+/* 下配置: カードの上に ▲ 矢印（上向き） */
+.storybook-coach-mark--bottom .storybook-coach-mark__tail {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 16px solid #ffffff;
+}
+
+/* 左配置: カードの右に ▶ 矢印（右向き） */
+.storybook-coach-mark--left .storybook-coach-mark__tail {
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 16px solid #ffffff;
+}
+
+/* 右配置: カードの左に ◀ 矢印（左向き） */
+.storybook-coach-mark--right .storybook-coach-mark__tail {
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 16px solid #ffffff;
+}

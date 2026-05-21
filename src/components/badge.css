@@ -7,7 +7,6 @@
   align-items: center;
   justify-content: center;
   background-color: #f78f43;  /* orange/500 */
-  border-radius: 7px;
   flex-shrink: 0;
 }
 
@@ -15,17 +14,19 @@
 .storybook-badge--dot {
   width: 10px;
   height: 10px;
+  border-radius: 7px;
 }
 
 /* ── Count ── */
 .storybook-badge--count {
-  height: 14px;
-  min-width: 14px;
+  height: 16px;
+  min-width: 16px;
   padding: 2px 4px;
+  border-radius: 10px;
   font-family: 'Hiragino Sans', sans-serif;
   font-weight: 300;
-  font-size: 10px;
-  line-height: 1.5;
+  font-size: 12px;
+  line-height: 1;
   color: #fff;
   white-space: nowrap;
   box-sizing: border-box;

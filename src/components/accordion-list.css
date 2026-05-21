@@ -1,0 +1,159 @@
+/* ==============================
+   AccordionList
+   ============================== */
+
+.storybook-accordion-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* ═══════════════════════════
+   List パターン
+═══════════════════════════ */
+
+.storybook-accordion-list--list .storybook-accordion-list__item {
+  border-bottom: 1px solid #eff0f1;
+}
+
+.storybook-accordion-list--list .storybook-accordion-list__item:first-child {
+  border-top: 1px solid #eff0f1;
+}
+
+.storybook-accordion-list--list .storybook-accordion-list__trigger {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 0;
+  width: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.1s ease;
+}
+
+.storybook-accordion-list--list .storybook-accordion-list__trigger:hover {
+  background: #f7f7f8;
+}
+
+.storybook-accordion-list--list .storybook-accordion-list__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  color: #000000;
+}
+
+.storybook-accordion-list--list .storybook-accordion-list__heading {
+  flex: 1;
+  font-family: 'Hiragino Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000000;
+}
+
+/* 本文エリア: icon(24px) + gap(4px) = 28px インデント */
+.storybook-accordion-list--list .storybook-accordion-list__content {
+  padding: 0 0 8px 28px;
+}
+
+.storybook-accordion-list--list .storybook-accordion-list__body {
+  margin: 0;
+  font-family: 'Hiragino Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #000000;
+}
+
+/* ═══════════════════════════
+   FAQ パターン
+═══════════════════════════ */
+
+.storybook-accordion-list--faq {
+  gap: 4px;
+}
+
+.storybook-accordion-list--faq .storybook-accordion-list__item {
+  border-radius: 8px;
+}
+
+/* 質問行（trigger） */
+.storybook-accordion-list--faq .storybook-accordion-list__trigger {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 8px;
+  width: 100%;
+  border-radius: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.1s ease;
+  box-sizing: border-box;
+}
+
+.storybook-accordion-list--faq .storybook-accordion-list__trigger:hover {
+  background: #f5f9ff;
+}
+
+/* Q. / A. ラベル */
+.storybook-accordion-list--faq .storybook-accordion-list__label {
+  font-family: 'Hiragino Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #318bf7;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* 質問テキスト */
+.storybook-accordion-list--faq .storybook-accordion-list__question {
+  flex: 1;
+  font-family: 'Hiragino Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #222222;
+}
+
+/* arrow アイコン */
+.storybook-accordion-list--faq .storybook-accordion-list__arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #222222;
+}
+
+/* 回答行 */
+.storybook-accordion-list--faq .storybook-accordion-list__answer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* 回答テキスト */
+.storybook-accordion-list--faq .storybook-accordion-list__answer-text {
+  flex: 1;
+  font-family: 'Hiragino Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #222222;
+}
