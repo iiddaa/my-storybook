@@ -1,0 +1,38 @@
+/* ──────────────────────────────────────────────
+   Brand Logo
+   Figma: brand-logo / canly_store-marketing_logo
+           brand-logo / canly_benefits_logo
+   サイズ: 136×61px（Figma準拠）
+   ────────────────────────────────────────────── */
+
+.storybook-brand-logo {
+  position: relative;
+  width: 136px;
+  height: 61px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* ワードマーク（上段）: top=0, bottom=49.88% → 高さ約30.6px */
+.storybook-brand-logo__top {
+  position: absolute;
+  inset: 0 0 49.88% 0;
+}
+
+.storybook-brand-logo__top svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* タグライン（下段）: top=71.02% → 約43.3pxから開始、高さ約17.7px */
+.storybook-brand-logo__bottom {
+  position: absolute;
+  inset: 71.02% 0 0 0;
+}
+
+.storybook-brand-logo__bottom svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
