@@ -1,27 +1,20 @@
 import './snack-bar.css';
+import { buildSvgEl } from './icons/index.js';
 
-const ICONS = {
-  progress: `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M13.5 8A5.5 5.5 0 1 1 11.22 3.74" stroke="#318bf7" stroke-width="1.5" stroke-linecap="round"/>
-    <path d="M11.5 2V5.5H15" stroke="#318bf7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>`,
-  success: `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <circle cx="8" cy="8" r="6.5" fill="#22ad7f"/>
-    <path d="M5 8L7.5 10.5L11.5 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>`,
-  error: `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <circle cx="8" cy="8" r="6.5" fill="#eb4d38"/>
-    <path d="M8 5V8.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-    <circle cx="8" cy="11" r="0.875" fill="white"/>
-  </svg>`,
-  alert: `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <circle cx="8" cy="8" r="6.5" fill="#f78f43"/>
-    <path d="M8 5V8.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-    <circle cx="8" cy="11" r="0.875" fill="white"/>
-  </svg>`,
-  close: `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M4 4L12 12M12 4L4 12" stroke="#858c94" stroke-width="1.5" stroke-linecap="round"/>
-  </svg>`,
+// タイプ別アイコン名（ICON_DEFS のキー）
+const TYPE_ICON_NAME = {
+  progress: 'sync',
+  success:  'check_circle',
+  error:    'x_circle',
+  alert:    'alert_circle',
+};
+
+// タイプ別アイコンカラー
+const TYPE_ICON_COLOR = {
+  progress: '#318bf7',
+  success:  '#22ad7f',
+  error:    '#eb4d38',
+  alert:    '#f78f43',
 };
 
 /**
@@ -56,7 +49,9 @@ export const createSnackBar = ({
   // 左アイコン
   const iconEl = document.createElement('span');
   iconEl.className = 'storybook-snack-bar__icon';
-  iconEl.innerHTML = ICONS[type] ?? ICONS.progress;
+  const iconName = TYPE_ICON_NAME[type] ?? TYPE_ICON_NAME.progress;
+  const iconColor = TYPE_ICON_COLOR[type] ?? TYPE_ICON_COLOR.progress;
+  iconEl.appendChild(buildSvgEl(iconName, 16, iconColor));
   root.appendChild(iconEl);
 
   // テキストエリア
@@ -87,7 +82,7 @@ export const createSnackBar = ({
   closeBtn.className = 'storybook-snack-bar__close';
   closeBtn.type = 'button';
   closeBtn.setAttribute('aria-label', '閉じる');
-  closeBtn.innerHTML = ICONS.close;
+  closeBtn.appendChild(buildSvgEl('x', 16, '#858c94'));
   closeBtn.addEventListener('click', (e) => {
     if (typeof onClose === 'function') onClose(e);
   });

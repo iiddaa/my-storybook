@@ -10,15 +10,16 @@
   min-width: 360px;
   padding: 12px 16px;
   border-radius: 4px;
+  border: 1px solid;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
   box-sizing: border-box;
 }
 
-/* ── タイプ別背景色 ── */
-.storybook-snack-bar--progress { background-color: #eaf3fe; }
-.storybook-snack-bar--success  { background-color: #e4f5ef; }
-.storybook-snack-bar--error    { background-color: #fdf2f0; }
-.storybook-snack-bar--alert    { background-color: #fef4ed; }
+/* ── タイプ別背景色・枠線色 ── */
+.storybook-snack-bar--progress { background-color: #eaf3fe; border-color: #318bf7; }
+.storybook-snack-bar--success  { background-color: #e4f5ef; border-color: #22ad7f; }
+.storybook-snack-bar--error    { background-color: #fdf2f0; border-color: #eb4d38; }
+.storybook-snack-bar--alert    { background-color: #fef4ed; border-color: #f78f43; }
 
 /* ── アイコン ── */
 .storybook-snack-bar__icon {
@@ -27,7 +28,8 @@
   flex-shrink: 0;
   width: 16px;
   height: 16px;
-  margin-top: 1px; /* テキストベースラインとの微調整 */
+  /* 14px × 1.5 = 21px行高、(21 - 16) / 2 = 2.5px → 文字1行目中央に揃える */
+  margin-top: 2px;
 }
 
 /* ── テキストエリア ── */
@@ -68,12 +70,13 @@
   width: 16px;
   height: 16px;
   padding: 0;
-  margin-top: 1px;
+  /* 左アイコンと同じ高さに揃える */
+  margin-top: 2px;
   background: none;
   border: none;
   cursor: pointer;
 }
 
 .storybook-snack-bar__close:hover svg path {
-  stroke: #555c63;
+  fill: #555c63;
 }
