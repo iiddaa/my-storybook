@@ -19,7 +19,7 @@
 
 /* ── Head ── */
 .storybook-icon__head {
-  background: #318bf7; /* background/accent = Blue/500 */
+  background: #fbbc04; /* Yellow/500 — Figma node I238:7680 */
   padding: 24px 32px;
 }
 
@@ -62,7 +62,7 @@
 .storybook-icon__concept-tagline {
   margin: 0;
   font-size: 12px;
-  color: #858c94; /* text/ink-light = Gray/500 */
+  color: #1e74db; /* text/accent-dark = Blue/600 — Figma: var(--blue/600) */
 }
 
 .storybook-icon__concept-body {
